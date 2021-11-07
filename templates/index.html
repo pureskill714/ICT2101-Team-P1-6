@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Maze Driver</title>
+    <style>
+      h1 {
+        position: absolute;
+        right: 496px;
+        top: 15px;
+        font-size: 89px;
+      }
+      img.puttputt {
+        width: 250px;
+        border-radius: 50px;
+        float: left;
+        margin-right: 10px;
+      }
+      img.maze {
+        position: absolute;
+        right: 850px;
+        top: 250px;
+        width: 250px;
+      }
+      em {
+        color: blue;
+        font-style: normal;
+      }
+      div.mascot {
+        position: absolute;
+        right: -1px;
+        bottom: 277px;
+        border-radius: 50px;
+        font-size: 37px;
+      }
+      button {
+        position: absolute;
+        width: 400px;
+        height: 201px;
+        right: 503px;
+        top: 544px;
+      }
+      body {
+        background-color: lightblue;
+      }
+    </style>
+
+{% endblock %}
+
+{% block body %}
+    <h1>Maze Driver</h1>
+    <img class="maze" src="{{url_for('static', filename='maze.JPG')}}" />
+    <div class="mascot">
+      <img
+        class="puttputt"
+        src="{{url_for('static', filename='PuttPutt.png')}}"
+        alt="Car Image Not Found"
+      />
+      <p>Are you ready for a great game?</p>
+      <p>
+        Click on the <b><em>Connect Wi-Fi</em></b> button to get started!
+      </p>
+    </div>
+    <button>Connect Wi-Fi</button>
+{% endblock %}
+
