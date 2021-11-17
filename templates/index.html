@@ -1,64 +1,39 @@
 {% extends 'base.html' %}
 {% block head %}
     <title>Maze Driver</title>
-    <style>
-      h1 {
-        position: absolute;
-        right: 496px;
-        top: 15px;
-        font-size: 89px;
-      }
-      img.puttputt {
-        width: 250px;
-        border-radius: 50px;
-        float: left;
-        margin-right: 10px;
-      }
-      img.maze {
-        position: absolute;
-        right: 850px;
-        top: 250px;
-        width: 250px;
-      }
-      em {
-        color: blue;
-        font-style: normal;
-      }
-      div.mascot {
-        position: absolute;
-        right: -1px;
-        bottom: 277px;
-        border-radius: 50px;
-        font-size: 37px;
-      }
-      button {
-        position: absolute;
-        width: 400px;
-        height: 201px;
-        right: 503px;
-        top: 544px;
-      }
-      body {
-        background-color: lightblue;
-      }
-    </style>
-
 {% endblock %}
 
 {% block body %}
-    <h1>Maze Driver</h1>
-    <img class="maze" src="{{url_for('static', filename='images/maze.JPG')}}" />
-    <div class="mascot">
-      <img
-        class="puttputt"
-        src="{{url_for('static', filename='images/PuttPutt.png')}}"
-        alt="Car Image Not Found"
-      />
-      <p>Are you ready for a great game?</p>
-      <p>
-        Click on the <b><em>Connect Wi-Fi</em></b> button to get started!
-      </p>
+<div class="container">
+    <h1 id="index_title" class="text-center">Maze Driver</h1>
+    <div class="row align-items-center">
+        <div class="col">
+            <img class="rounded float-start maze" src="{{url_for('static', filename='images/maze.JPG')}}" />
+        </div>
+
+        <div class="col">
+            <p>Are you ready for a great game?</p>
+            <p>Click on the <b><em>Connect Wi-Fi</em></b> button to get started!</p>
+        </div>
+
+        <div class="col">
+            <img class="puttputt" src="{{url_for('static', filename='images/PuttPutt.png')}}" alt="Car Image Not Found"/>
+        </div>
     </div>
-    <button>Connect Wi-Fi</button>
+
+    <div class="row">
+        <div class="col-sm">
+        </div>
+
+        <div class="col-sm">
+            <form action="/main" method="get">
+                <button class="btn btn-light" id="connect_button" ><em>Connect Wi-Fi</em></button>
+            </form>
+        </div>
+
+        <div class="col-sm">
+        </div>
+    </div>
+</div>
 {% endblock %}
 
