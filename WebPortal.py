@@ -23,7 +23,7 @@ def main():
     if car.connection():
         car.setCarStat(0,0,"connected","idle")
         data= car.getCarStat()
-        return render_template('main.html',data=data) #data = what u want to pass to html page eg. see main.html
+        return render_template('main.html', data=data) #data = what u want to pass to html page eg. see main.html
     else:
         return render_template('index.html')
 
