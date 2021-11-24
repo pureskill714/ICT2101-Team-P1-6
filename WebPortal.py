@@ -11,6 +11,8 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+
+
 #instantiate new car
 car=CarController("1001","123456")
 
@@ -24,6 +26,11 @@ def main():
         return render_template('main.html',data=data) #data = what u want to pass to html page eg. see main.html
     else:
         return render_template('index.html')
+
+#selectlevel page
+@app.route('/selectlevel')
+def selectlevel():
+    return render_template('selectlevel.html')
 
 if __name__ =="__main__":
     app.run(debug=True)
