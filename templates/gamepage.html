@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Maze Driver</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+   p.thick {
+  font-weight: bold;
+}
+    </style>
+</head>
+
+<h1>GamePage/Dashboard </h1>
+<h3> Choose the following commands: </h3>
+
+<div>
+    <button onclick="forFunc()" type="button" class="btn btn-primary">Move Forward</button>
+    <button onclick="backFunc()" type="button" class="btn btn-primary">Move Back</button>
+    <button onclick="rightFunc()" type="button" class="btn btn-primary">Move Right</button>
+    <button onclick="leftFunc()" type="button" class="btn btn-primary">Move Left</button>
+    <button onclick="stopFunc()" type="button" class="btn btn-primary">Stop</button>
+    <button onclick="delFunc()" type="button" class="btn btn-primary">Delete</button>
+
+</div>
+
+<div></div>
+<div>
+    <p class="thick">Commands selected:</p>
+</div>
+<div>
+    <p id = "btn1"></p>
+    <p id = "btn2"></p>
+    <p id = "btn3"></p>
+    <p id = "btn4"></p>
+    <p id = "btn5"></p>
+</div>
+
+
+
+<script>
+
+
+var cnt = 0;
+var cnt1 = 0;
+var cnt2 = 0;
+var cnt3 = 0;
+var cnt4 = 0;
+
+     function forFunc() {
+     cnt=parseInt(cnt)+parseInt(1);
+     document.getElementById("btn1").innerHTML = "Move Forward"+ "x" + cnt;
+    }
+
+    function backFunc() {
+    cnt1=parseInt(cnt1)+parseInt(1);
+    document.getElementById("btn2").innerHTML = "Move Back"+"x" + + cnt1;
+    }
+
+    function rightFunc() {
+    cnt2=parseInt(cnt2)+parseInt(1);
+    document.getElementById("btn3").innerHTML = "Move Right"+"x" + + cnt2;
+    }
+
+    function leftFunc() {
+    cnt3=parseInt(cnt3)+parseInt(1);
+    document.getElementById("btn4").innerHTML = "Move Left"+"x" + + cnt3;
+    }
+
+    function stopFunc() {
+    cnt4=parseInt(cnt4)+parseInt(1);
+    document.getElementById("btn5").innerHTML = "Stop"+"x" + + cnt4;
+    }
+
+    function delFunc() {
+
+    }
+</script>
+</html>
+
