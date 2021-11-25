@@ -1,32 +1,11 @@
 {% extends 'base.html' %}
 {% block head %}
    <title>Selection Level</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/selectlevel.css')}}" />
 {% endblock %}
 {% block body %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/selectlevel.css')}}" />
-   <!bootscrap css>
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity=
-          "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-        crossorigin="anonymous">
-
-</head>
-
-
-<body>
-   <img src="{{url_for('static', filename='images/PuttPutt.png')}}" alt="Car Image Not Found" class="img" />
-    <h1 id="header">PUTT PUTT PROGRAMMING</h1>
-
-</body>
-
+<img src="{{url_for('static', filename='images/PuttPutt.png')}}" alt="Car Image Not Found" class="img" />
+<h1 id="header">PUTT PUTT PROGRAMMING</h1>
 <main  class="container">
     <br>
     <h2 class="subheader">SELECT LEVEL</h2>
@@ -58,8 +37,6 @@
                     </div>
     </section>
 
-
-
    <section id="second">
                 <div class="row">
                 <article class="col-sm">
@@ -89,5 +66,4 @@
       <a href="main?"><button class="backbtn">Back to Main Menu</button></a>
 
 </main>
-</html>
 {% endblock %}

@@ -22,7 +22,7 @@ html
 .container
 {
     min-width: 1500px;
-    background-image: url("images/bluemoon.png");
+    background-image: url('/static/images/bluemoon.png')}});
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
