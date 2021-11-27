@@ -23,10 +23,19 @@ class CarController(Car):
     '''
     def setCarStat(self,speed,dist,status,state):
         Car.setSpeed(self,speed)
-        Car.setStatus(self,status)
         Car.setDist(self,dist)
+        Car.setStatus(self,status)
         Car.setState(self,state)
 
     def getCarStat(self):
-        stat = [Car.getSpeed(self), Car.getStatus(self,), Car.getDist(self,),Car.getState(self)]
+        stat = {}
+        stat["status"] = Car.getStatus(self)
+        stat["state"] = Car.getState(self)
+        stat["dist"] = Car.getDist(self)
+        stat["speed"] = Car.getSpeed(self)
+        # stat = [Car.getStatus(self),Car.getState(self),Car.getDist(self),Car.getSpeed(self)]
         return stat
+# car = CarController("sasas","asasas")
+# car.setCarStat("3m/h", "10.7m", "Connected","Idle")
+# stat = car.getCarStat()
+# print(stat)

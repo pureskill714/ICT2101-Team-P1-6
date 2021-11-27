@@ -20,14 +20,13 @@
                     <button id="right" type="button" class="btn btn-primary btnMargin">Move Right</button>
                 </div>
                 <div class="col leftline">
-                    <p>Selected command(s):</p>
+                    <p>Selected command(s):{{a}}</p>
                     <div class="col box1">
                         <p id="cmds"></p>
                     </div>
                 </div>
             </div>
             <div class="row text-center">
-                <p>execution buttons</p>
                 <div class="col">
                     <button id="clear" type="button" class="btn btn-primary btnMargin">Clear Command</button>
                 </div>
@@ -42,9 +41,31 @@
         <div class="col box">
             <div class="row">
                 <p>Dashboard</p>
+                <div class="row box2">
+                    {% if data %}
+                    <div class="col">
+                        <p>Status: <em class="stat">{{ data["status"] }}</em></p>
+                    </div>
+                    <div class="col">
+                        <p>State: <em class="stat">{{ data["state"] }}</em></p>
+                    </div>
+                    <div class="col">
+                        <p>Distance: <em class="stat">{{ data["dist"] }}</em></p>
+                    </div>
+                    <div class="col">
+                        <p>Speed: <em class="stat">{{ data["speed"] }}</em></p>
+                    </div>
+                    {% endif %}
+                    <div class="col">
+                        <p>Time:</p>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <p>Virtual Map</p>
+                <div class="row box2">
+                    map
+                </div>
             </div>
         </div>
     </div>

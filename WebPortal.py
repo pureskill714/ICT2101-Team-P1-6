@@ -28,9 +28,11 @@ def main():
 @app.route('/gamepage', methods=['GET', 'POST'])
 def game():
     if request.method == 'POST':
-        cmd = request.form['cmdList'];
-        print(cmd);
-    return render_template('gamepage.html')
+        cmd = request.form['cmdList']
+    car.setCarStat("10m/h","12m","Connected","Idle")
+    data = car.getCarStat()
+    print(data["speed"])
+    return render_template('gamepage.html',data=data)
 
 if __name__ =="__main__":
     app.run(debug=True)
