@@ -30,14 +30,37 @@
                 <button id="open_form_btn" onclick="open_form_btn1()" class="btn btn-primary main_button">Configure Levels</button>
             </div>
             <div class="popup_form" id="my_form">
-                <form id="form" class="form_container" >
+                <form id="form" class="form_container" autocomplete=OFF>
                 <h1>Faciliator Login</h1>
                 <label>Password:</label>
-                <input type="password" name="password" id="password"  placeholder="Enter your password" required autocomplete="off">
+                <input type="password" name="password" id="password" placeholder="Enter your password" required autocomplete="off">
                 <button type="submit" id="login" onclick="validate()" class="login_btn">Login</button>
                 <button class="cancel_btn" onclick="close_btn()">Close</button>
                 </form>
             </div>
+
+               <script>
+
+                function open_form_btn1(){
+                    document.getElementById('my_form').style.display = "block"
+                }
+                function close_btn(){
+                    document.getElementById('my_form').style.display ="none"
+                }
+                const loginForm = document.getElementById("form");
+                const loginButton = document.getElementById("login");
+                loginButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                const password = loginForm.password.value;
+
+                if (password === "test") {
+                alert("You have successfully logged in.");
+                window.location = "selectlevel?"
+                } else {
+                    loginErrorMsg.style.opacity = 1;
+                 }
+                })
+            </script>
 
             <div class="form-group">
                 <a class="btn btn-primary main_button">Exit</a>
