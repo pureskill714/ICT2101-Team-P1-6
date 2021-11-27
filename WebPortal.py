@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from CarController import CarController
 app = Flask(__name__)
 
@@ -24,6 +24,13 @@ def main():
         return render_template('main.html',data=data) #data = what u want to pass to html page eg. see main.html
     else:
         return render_template('index.html')
+
+@app.route('/gamepage', methods=['GET', 'POST'])
+def game():
+    if request.method == 'POST':
+        cmd = request.form['cmdList'];
+        print(cmd);
+    return render_template('gamepage.html')
 
 if __name__ =="__main__":
     app.run(debug=True)
