@@ -31,8 +31,11 @@ def game():
         cmd = request.form['cmdList']
     car.setCarStat("10m/h","12m","Connected","Idle")
     data = car.getCarStat()
-    print(data["speed"])
+    data["map"]=[0,1,0,0,1,1,0,0,0]
+    # print(data["speed"])
     return render_template('gamepage.html',data=data)
-
+@app.route('/maze')
+def maze():
+    return render_template('maze.html')
 if __name__ =="__main__":
     app.run(debug=True)

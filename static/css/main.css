@@ -63,6 +63,7 @@ body {
     border-style: solid;
     border-width: 3px;
     margin: 1px;
+    height:250px;
 }
 .leftline{
     border-left: 3px solid;
@@ -93,3 +94,14 @@ body {
 .stat{
     color: red;
 }
+.game{
+    display: grid;
+    grid-template-columns:repeat(3, min(150px));
+}
+
+.game > #board{
+    grid-column-start: span 2;
+    display: grid;
+    padding: 3rem;
+}
+
