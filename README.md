@@ -57,7 +57,7 @@ Develop a Web-Based Maze Game with Wi-Fi Controlled Robotic Car
 - System State Diagram
 - Video for System Test
 
-#W# hitebox Testing
+## Whitebox Testing
 - Selected class to demonstrate the test code
 - Test Cases
 - Test Suite Execution Instructions
