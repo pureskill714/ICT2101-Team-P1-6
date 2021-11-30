@@ -12,16 +12,16 @@ Develop a Web-Based Maze Game with Wi-Fi Controlled Robotic Car
 
 - [Python 3.X](https://www.python.org/downloads/)
 
-#Project Pre-Requisites
+## Project Pre-Requisites
 
 - Connection to HC-05 Bluetooth module
 
-#How to run
+## How to run
 1. Navigate to the root directory of this project
 2. execute the command python WebPortal.py
 3. open any browser and navigate to [localhost](https://github.com/team-p4-5/ICT2101-p4-5#)
 
-#Team P1-6's Workflow:
+## Team P1-6's Workflow:
 **Rules:**
 
 - Features assigned to different members of the team MUST have their own branch per feature under dev branch.
@@ -52,12 +52,12 @@ Develop a Web-Based Maze Game with Wi-Fi Controlled Robotic Car
 1. Developers can create the hotfix branch `hotfix_<minor_version_num>`
 2. All hotfixes branch off master and merge back into both dev and master
 
-#User Acceptance Test
+## User Acceptance Test
 - Use case Diagram
 - System State Diagram
 - Video for System Test
 
-#Whitebox Testing
+#W# hitebox Testing
 - Selected class to demonstrate the test code
 - Test Cases
 - Test Suite Execution Instructions
