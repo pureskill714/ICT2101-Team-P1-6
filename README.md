@@ -19,7 +19,7 @@ Develop a Web-Based Maze Game with Wi-Fi Controlled Robotic Car
 ## How to run
 1. Navigate to the root directory of this project
 2. execute the command python WebPortal.py
-3. open any browser and navigate to [localhost](https://github.com/team-p4-5/ICT2101-p4-5#)
+3. open any browser and navigate to [localhost]
 
 ## Team P1-6's Workflow:
 **Rules:**
