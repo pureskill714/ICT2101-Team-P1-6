@@ -27,10 +27,13 @@ def main():
     else:
         return render_template('index.html')
 
-#selectlevel page
 @app.route('/selectlevel')
 def selectlevel():
     return render_template('selectlevel.html')
+
+@app.route('/Configlevelpage')
+def Configlevelpage():
+    return render_template('Configlevelpage.html')
 
 if __name__ =="__main__":
     app.run(debug=True)

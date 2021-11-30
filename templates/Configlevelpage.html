@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block head %}
+   <title>Config Levels Page</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/Configlevelpagestyle.css')}}" />
+
+{% endblock %}
+{% block body %}
+    
+    <div class="game">
+        <div id="board">
+        </div>
+        <div id="controls">
+            <div class="flexItem" onclick="startNewGame()"><button id="newGame">New Game</button></div><br>
+            <div class="flexItem" onclick="saveGame()"><button id="saveGame">Save Game</button></div><br>
+            <div class="flexItem">
+                <button id="3by3" onclick="changeGridSize(3)">Small</button>
+                <button id="4by4" onclick="changeGridSize(6)">Medium</button>
+                <button id="5by5" onclick="changeGridSize(9)">Large</button>
+                <button id="6by6" onclick="changeGridSize(12)">Extra Large</button>
+            </div><br>
+            <div class="flexItem">
+                <button id="easy" >Beginner</button>
+                <button id="medium" >Average</button>
+                <button id="hard">Expert</button>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="{{url_for('static', filename='js/ConfiglevelpageJS.js')}}"></script>
+</body>
+{% endblock %}
