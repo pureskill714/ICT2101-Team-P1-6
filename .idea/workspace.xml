@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -21,9 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a45c303a-86d2-4349-a457-c7d1cbc4eae9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebPortal.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebPortal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/Configlevelpagestyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/Configlevelpagestyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/ConfiglevelpageJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ConfiglevelpageJS.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Configlevelpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Configlevelpage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON5&#10;JSON" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="WebPortal" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -108,25 +113,33 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1637750225516">
+    <state x="508" y="241" key="#Notifications" timestamp="1638288093859">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1637750225516" />
-    <state width="1515" height="213" key="GridCell.Tab.0.bottom" timestamp="1638279890459">
+    <state x="508" y="241" key="#Notifications/0.0.1536.834@0.0.1536.834" timestamp="1638288093859" />
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1638287685105">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1638279890459" />
-    <state width="1515" height="213" key="GridCell.Tab.0.center" timestamp="1638279890459">
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1638287685105" />
+    <state width="1515" height="213" key="GridCell.Tab.0.bottom" timestamp="1638293339343">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1638279890459" />
-    <state width="1515" height="213" key="GridCell.Tab.0.left" timestamp="1638279890459">
+    <state width="1515" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1638293339343" />
+    <state width="1515" height="213" key="GridCell.Tab.0.center" timestamp="1638293339343">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1638279890459" />
-    <state width="1515" height="213" key="GridCell.Tab.0.right" timestamp="1638279890459">
+    <state width="1515" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1638293339343" />
+    <state width="1515" height="213" key="GridCell.Tab.0.left" timestamp="1638293339342">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1638279890459" />
+    <state width="1515" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1638293339342" />
+    <state width="1515" height="213" key="GridCell.Tab.0.right" timestamp="1638293339343">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1638293339343" />
+    <state x="289" y="122" key="SettingsEditor" timestamp="1638290825834">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="289" y="122" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1638290825834" />
   </component>
 </project>

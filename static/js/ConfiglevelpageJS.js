@@ -63,7 +63,6 @@ const changeDifficulty = (difficulty) =>{
     currentDifficulty.disabled = !currentDifficulty.disabled;
     difficulty.disabled = !difficulty.disabled;
     currentDifficulty = difficulty;
-
 };
 
 const startNewGame = () =>{
