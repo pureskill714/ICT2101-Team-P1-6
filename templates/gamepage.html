@@ -38,7 +38,7 @@
                         <input id="cmdList" name="cmdList" type="hidden" value="">
                         <input id="submit" type="submit" class="btn btn-primary btnMargin" value="Execute Command">
                     </form>
-                    <button id="run" class="btn btn-primary btnMargin">Run</button>
+                    <a id="run" class="btn btn-primary btnMargin">Run</a>
                 </div>
             </div>
         </div>
@@ -60,8 +60,13 @@
                         <p>Speed: <em class="stat">{{ data["speed"] }}</em></p>
                     </div>
                     {% endif %}
+                </div>
+                <div class="row box2">
                     <div class="col">
                         <p>Time:</p>
+                    </div>
+                    <div class="col">
+                        <p>Run Count: <em id="count" class="stat"></em></p>
                     </div>
                 </div>
             </div>
@@ -98,8 +103,12 @@
         </div>
     </div>
 </div>
+<script type=text/javascript>
+
+</script>
 <script type="text/javascript">
     var cmd = ""; //use to store the cmd select by user
+    var runcount = 0;
     function up(){
         cmd+="1";
 
@@ -128,20 +137,15 @@ let app = {};
    */
   let levels = [];
   levels[0] = {
-    map:[
-       [1,1,0],
-       [1,0,0],
-       [0,0,1]
-
-    ],
+    map:{{data["map"]}},
 
     player:{
-        x:0,
-        y:2
+        x:{{data["start"][0]}},
+        y:{{data["start"][1]}}
     },
     goal:{
-        x:2,
-        y:0
+        x:{{data["end"][0]}},
+        y:{{data["end"][1]}}
     },
     theme:'default',
   };
@@ -571,13 +575,29 @@ Game.prototype.keyboardListener = function() {
    if(run != null){
     run.addEventListener('click',function() {
         let x=cmd;
+        runcount+=1;
+        document.getElementById('count').innerHTML = runcount;
+            //$.getJSON('/background_process_test',
+                //function(data) {
+              //do nothing
+            //});
+        $.ajax({
+          url: "/background_process_test",
+          type: "get",
+          data: {cmd: cmd},
+          success: function(response) {
+            var new_html = response.html;
+          },
+        });
+
+
+
         for (let i = 0; i < x.length; i++) {
-        console.log("in loop");
-            if(x[i] == "1"){
+            if(x[i] == "a"){
                 obj.moveUp();
                 obj.checkGoal();
             }
-            else if(x[i] == "2"){
+            else if(x[i] == "b"){
                 obj.moveDown();
                 obj.checkGoal();
             }
@@ -590,6 +610,9 @@ Game.prototype.keyboardListener = function() {
                 obj.checkGoal();
             }
         }
+        cmd="";
+        document.getElementById('cmds').innerHTML = '';
+
     });
    }
    else{
