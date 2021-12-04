@@ -13,7 +13,7 @@ class CarController(Car):
     """
     def bluetoothSetUp(self):
         ser = serial.Serial()
-        ser.port = "COM14"
+        ser.port = "COM15"
         ser.baudrate = 9600
         ser.bytesize = serial.EIGHTBITS  # number of bits per bytes
         ser.parity = serial.PARITY_NONE  # set parity check: no parity

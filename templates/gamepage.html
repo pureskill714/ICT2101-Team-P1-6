@@ -582,7 +582,7 @@ Game.prototype.keyboardListener = function() {
               //do nothing
             //});
         $.ajax({
-          url: "/background_process_test",
+          url: "/sendcommand",
           type: "get",
           data: {cmd: cmd},
           success: function(response) {

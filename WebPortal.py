@@ -45,7 +45,7 @@ def game():
     return render_template('gamepage.html',data=data)
 
 #background process happening without any refreshing
-@app.route('/background_process_test')
+@app.route('/sendcommand')
 def background_process_test():
     cmd = request.args.get('cmd')
     print(f"cmd received={cmd}")
