@@ -35,17 +35,5 @@ def selectlevel():
 def Configlevelpage():
     return render_template('Configlevelpage.html')
 
-@app.route('/gamepage', methods=['GET', 'POST'])
-def game():
-    if request.method == 'POST':
-        cmd = request.form['cmdList']
-    car.setCarStat("10m/h","12m","Connected","Idle")
-    data = car.getCarStat()
-    data["map"] = [[1,1,0],[1,0,0],[0,0,1]]
-    data["start"] = [0,2]
-    data["end"] = [2,0]
-    # print(data["speed"])
-    return render_template('gamepage.html',data=data)
-
 if __name__ =="__main__":
     app.run(debug=True)
