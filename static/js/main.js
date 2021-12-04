@@ -14,11 +14,13 @@ function close_btn(){
 
           if (password === "test") {
              window.location = "Configlevelpage?"
-           } else {
+           }
+           else
+           {
                alert("Fail authentication");
                window.location = "main?"
            }
-          })
+        })
 function disableselect(e){
     return false
 }
