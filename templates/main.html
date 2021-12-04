@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Main menu</title>
+{% endblock %}
+{% block body %}
+<div class="container">
+    <h1 id="index_title" class="text-center">Maze Driver</h1>
+    <div class="row align-items-center">
+        <div class="col">
+            <div class="row">
+<!--                data is a list, i only want the status attribute in data which is the 2nd item so data[1]-->
+                <p>Robot Car Connection Status : <p style="color:red">{{data[1]}}</p></p>
+            </div>
+            <div class="row">
+                <h3 class="main">Hey kids! Click on the <em><b>Main Levels</b></em> button to get the game started!</h3>
+            </div>
+
+        </div>
+
+        <div class="col text-center">
+
+            <div class="form-group">
+                <a class="btn btn-primary main_button">Main Levels</a>
+            </div>
+            <div class="form-group">
+                <a class="btn btn-primary main_button">Custom Levels</a>
+            </div>
+            <div class="form-group">
+                <a class="btn btn-primary main_button">Configure Levels</a>
+            </div>
+            <div class="form-group">
+                <a class="btn btn-primary main_button">Exit</a>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="row">
+                <img class="puttputt" src="{{url_for('static', filename='images/PuttPutt.png')}}" alt="Car Image Not Found"/>
+            </div>
+            <div class="row">
+                <h3 class="custom">You can also try the <em><b>Custom Levels</b></em> for extra challenges later on.Have fun!</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+
+        </div>
+
+        <div class="col-sm">
+
+
+        </div>
+
+        <div class="col-sm">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+

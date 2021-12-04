@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Maze Driver</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 id="index_title" class="text-center">Maze Driver</h1>
+    <div class="row align-items-center">
+        <div class="col">
+            <img class="rounded float-start maze" src="{{url_for('static', filename='images/maze.JPG')}}" />
+        </div>
+
+        <div class="col">
+            <p>Are you ready for a great game?</p>
+            <p>Click on the <b><em>Connect Wi-Fi</em></b> button to get started!</p>
+        </div>
+
+        <div class="col">
+            <img class="puttputt" src="{{url_for('static', filename='images/PuttPutt.png')}}" alt="Car Image Not Found"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+        </div>
+
+        <div class="col-sm">
+            <form action="/main" method="get">
+                <button class="btn btn-light" id="connect_button" ><em>Connect Wi-Fi</em></button>
+            </form>
+        </div>
+
+        <div class="col-sm">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
