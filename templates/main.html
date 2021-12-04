@@ -3,7 +3,7 @@
     <title>Main menu</title>
 {% endblock %}
 {% block body %}
-
+<body oncontextmenu="return false";>
 <div class="container">
     <h1 id="index_title" class="text-center">Maze Driver</h1>
     <div class="row align-items-center">
@@ -38,30 +38,6 @@
                 <button class="cancel_btn" onclick="close_btn()">Close</button>
                 </form>
             </div>
-
-               <script>
-
-                function open_form_btn1(){
-                    document.getElementById('my_form').style.display = "block"
-                }
-                function close_btn(){
-                    document.getElementById('my_form').style.display ="none"
-                }
-                const loginForm = document.getElementById("form");
-                const loginButton = document.getElementById("login");
-                loginButton.addEventListener("click", (e) => {
-                e.preventDefault();
-                const password = loginForm.password.value;
-
-                if (password === "test") {
-                alert("You have successfully logged in.");
-                window.location = "selectlevel?"
-                } else {
-                    loginErrorMsg.style.opacity = 1;
-                 }
-                })
-            </script>
-
             <div class="form-group">
                 <a class="btn btn-primary main_button">Exit</a>
             </div>
@@ -76,6 +52,8 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="{{url_for('static', filename='js/main.js')}}"></script>
 
     <div class="row">
         <div class="col-sm">
@@ -92,5 +70,6 @@
         </div>
     </div>
 </div>
+</body>
 {% endblock %}
 
