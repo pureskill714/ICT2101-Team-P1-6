@@ -44,8 +44,8 @@ def game():
     # print(data["speed"])
     return render_template('gamepage.html',data=data)
 
-#background process happening without any refreshing
-@app.route('/background_process_test')
+
+@app.route('/sendcommand')
 def background_process_test():
     cmd = request.args.get('cmd')
     print(f"cmd received={cmd}")
@@ -61,5 +61,6 @@ def background_process_test():
     # else:
     #     flash("failed"+result[1])
     return ("nothing")
+
 if __name__ =="__main__":
     app.run(debug=True)

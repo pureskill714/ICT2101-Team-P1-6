@@ -1,5 +1,6 @@
 # ICT2101-Team-P1-6
-Develop a Web-Based Maze Game with Wi-Fi Controlled Robotic Car
+
+Develop a Web-Based Maze Game with integration with Wi-Fi Controlled Robotic Car
 
 ## Team Members
 - Muhammad Abdurraheem Bin Abdul Hamid  `1501918@sit.singaporetech.edu.sg`
@@ -8,9 +9,9 @@ Develop a Web-Based Maze Game with Wi-Fi Controlled Robotic Car
 - Satya Darshini   `2002122@sit.singaporetech.edu.sg`
 - Zulekah Khan Binte Salahuddin Khan `2001222@sit.singaporetech.edu.sg`
 
-## Dependencies
-
-- [Python 3.X](https://www.python.org/downloads/)
+## Dependencies and Prerequisities
+- Implemented using Programming language such as Flask, HTML ,Arduino IDE ,CSS ,Javascript, Code Composer and jQuery
+- This project requires Python 3.6 or newer version with Flask Framework install. It is advisable to use Pycharm Community Edition IDE to run local web server.
 
 ## Project Pre-Requisites
 
@@ -62,6 +63,4 @@ Develop a Web-Based Maze Game with Wi-Fi Controlled Robotic Car
 - Test Cases
 - Test Suite Execution Instructions
 - video for Test Suite Execution
-
-
 
