@@ -32,14 +32,6 @@ def main():
         flash("Connection fail")
         return render_template('index.html')
 
-@app.route('/selectlevel')
-def selectlevel():
-    return render_template('selectlevel.html')
-
-@app.route('/Configlevelpage')
-def Configlevelpage():
-    return render_template('Configlevelpage.html')
-
 @app.route('/gamepage', methods=['GET', 'POST'])
 def game():
     if request.method == 'POST':
@@ -52,7 +44,7 @@ def game():
     # print(data["speed"])
     return render_template('gamepage.html',data=data)
 
-#background process happening without any refreshing
+
 @app.route('/sendcommand')
 def background_process_test():
     cmd = request.args.get('cmd')
