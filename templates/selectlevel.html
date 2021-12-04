@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block head %}
+   <title>Selection Level</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/selectlevel.css')}}" />
+{% endblock %}
+{% block body %}
+<img src="{{url_for('static', filename='images/PuttPutt.png')}}" alt="Car Image Not Found" class="img" />
+<h1 id="header">PUTT PUTT PROGRAMMING</h1>
+<main  class="container">
+    <br>
+     <p style="text-align:center; font-size:35px; color:red;text-transform: uppercase;font-family: verdana;" id="sub_header">SELECT LEVEL</p>
+     <section id="first">
+                <div class="row">
+                <article class="col-sm">
+                   <figure class="big">
+                           <a href="mainMenu.html"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level1'
+                                 title='Level 1'/></a>
+                        <figcaption><b>Level 1</b></figcaption>
+                    </figure>
+
+                </article>
+                <article class="col-sm">
+                    <figure class="big"> <!adding images>
+                             <a href="mainMenu.html"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level2'
+                                 title='Level 2'/></a>
+                        <figcaption><b>Level 2</b></figcaption>
+                    </figure>
+                </article>
+
+                 <article class="col-sm">
+                    <figure class="big">
+                              <a href="mainMenu.html"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level3'
+                                 title='Level 3'/></a>
+                         <figcaption><b>Level 3</b></figcaption>
+                    </figure>
+                </article>
+                    </div>
+    </section>
+
+   <section id="second">
+                <div class="row">
+                <article class="col-sm">
+                    <figure class="big">
+                         <a href="mainMenu.html"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level4'
+                                 title='Level 4'/></a>
+                         <figcaption><b>Level 4</b></figcaption>
+                    </figure>
+                </article>
+                <article class="col-sm">
+                    <figure class="big">
+                          <a href="mainMenu.html"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level5'
+                                 title='Level 5'/></a>
+                         <figcaption><b>Level 5</b></figcaption>
+                    </figure>
+                </article>
+
+                 <article class="col-sm">
+                  <figure class="big">
+                             <a href="mainMenu.html"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level6'
+                                 title='Level 6'/></a>
+                      <figcaption><b>Level 6</b></figcaption>
+                    </figure>
+                </article>
+                    </div>
+    </section>
+      <a href="main?"><button class="backbtn">Back to Main Menu</button></a>
+
+</main>
+{% endblock %}
