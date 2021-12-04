@@ -22,7 +22,8 @@ conn = car.openConnection()
 #calling connection() from carCOntroller before redirect
 @app.route('/main')
 def main():
-    if conn[0]:
+    # if conn[0]:
+    if True:
         flash("Connect successfully")
         car.setCarStat(0,0,"connected","idle")
         data= car.getCarStat()
@@ -31,6 +32,14 @@ def main():
         print(conn[1])
         flash("Connection fail")
         return render_template('index.html')
+
+@app.route('/selectlevel')
+def selectlevel():
+    return render_template('selectlevel.html')
+
+@app.route('/Configlevelpage')
+def Configlevelpage():
+    return render_template('Configlevelpage.html')
 
 @app.route('/gamepage', methods=['GET', 'POST'])
 def game():
@@ -44,18 +53,18 @@ def game():
     # print(data["speed"])
     return render_template('gamepage.html',data=data)
 
-
+#background process happening without any refreshing
 @app.route('/sendcommand')
 def background_process_test():
     cmd = request.args.get('cmd')
     print(f"cmd received={cmd}")
-    connected = car.testConnection(conn)
-    if connected[0]:
-        result = car.sendCommand(connected[1],cmd)
-    # flash(result)
-        print(result[1])
-    else:
-        print(connected[1])
+    # connected = car.testConnection(conn)
+    # if connected[0]:
+    #     result = car.sendCommand(connected[1],cmd)
+    # # flash(result)
+    #     print(result[1])
+    # else:
+    #     print(connected[1])
     # if(result[0]):
     #     flash("success"+result[1])
     # else:

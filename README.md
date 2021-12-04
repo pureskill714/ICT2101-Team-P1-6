@@ -1,5 +1,4 @@
 # ICT2101-Team-P1-6
-
 Develop a Web-Based Maze Game with integration with Wi-Fi Controlled Robotic Car
 
 ## Team Members
@@ -63,4 +62,3 @@ Develop a Web-Based Maze Game with integration with Wi-Fi Controlled Robotic Car
 - Test Cases
 - Test Suite Execution Instructions
 - video for Test Suite Execution
-

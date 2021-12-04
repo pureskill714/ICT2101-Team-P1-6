@@ -104,3 +104,77 @@ body {
     display: grid;
     padding: 3rem;
 }
+
+.popup_form{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid;
+    display:none;
+}
+
+.form_container{
+    max-width:350px;
+    padding:10px;
+    background-color:white;
+}
+.form_container h1{
+    text-align: center;
+    color: #00004d;
+    font-size:30px;
+}
+
+.form_container input[type=text]{
+    width:100%;
+    padding:15px;
+    margin:5px 0px 22px 0px;
+    border: 1px solid #f1f1f1;
+    background-color: #fff;
+}
+
+.form_container input[type=password]{
+    width:100%;
+    padding:15px;
+    margin:5px 0px 22px 0px;
+    border: 1px solid #f1f1f1;
+    background-color: #fff;
+}
+
+.form_container input[type=text]:focus{
+    background-color: #f1f1f1;
+    outline: none;
+}
+.form_container input[type=password]:focus{
+    background-color: #f1f1f1;
+    outline: none;
+}
+
+.login_btn{
+    background-color: #800033;
+    color:white;
+    padding: 16px 20px;
+    cursor:pointer;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    width: 100%;
+    outline: none;
+}
+
+.cancel_btn{
+    background-color: #cc0000;
+    color:white;
+    padding: 16px 20px;
+    cursor:pointer;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    width: 100%;
+    outline: none;
+}
+
+.login_btn:hover{
+    opacity: 1;
+}
+.cancel_btn:hover{
+    opacity: 1;
+}
