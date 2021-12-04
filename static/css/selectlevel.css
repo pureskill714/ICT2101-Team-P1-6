@@ -34,7 +34,7 @@ html
     1px 25px 40px rgba(16,16,16,0.4);
 }
 
-.container
+.containerbody
 {
     min-width: 150px;
     background-image: url('/static/images/bluemoon.png')}});
@@ -48,7 +48,6 @@ html
 #sub_header
 {
     text-align: center;
-    color: red;
     font-family: "Times New Roman", Times, serif;
 }
 
