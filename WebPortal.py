@@ -32,6 +32,14 @@ def main():
         flash("Connection fail")
         return render_template('index.html')
 
+@app.route('/selectlevel')
+def selectlevel():
+    return render_template('selectlevel.html')
+
+@app.route('/Configlevelpage')
+def Configlevelpage():
+    return render_template('Configlevelpage.html')
+
 @app.route('/gamepage', methods=['GET', 'POST'])
 def game():
     if request.method == 'POST':
