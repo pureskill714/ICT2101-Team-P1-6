@@ -30,11 +30,79 @@ div.mascot {
 body {
     background-color: lightblue;
 }
+
 .main_button{
     width: 250px;
     height: 80px;
     margin: 20px;
     justify-content: center;
+
+}
+#img {
+    width: 200px;
+    border-radius: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header
+{
+    margin-top: 20px;
+    text-align: center;
+    color: purple;
+}
+
+.box {
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 3px;
+    margin: 5px;
+}
+
+.smallbox{
+    border-style: solid;
+    border-width: 3px;
+    margin: 1px;
+    height:250px;
+}
+.leftline{
+    border-left: 3px solid;
+}
+
+.box1 {
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 3px;
+    margin: 2px;
+    height: 78%;
+}
+.box2 {
+    border-style: solid;
+    border-width: 3px;
+    margin: 3px;
+    width: 99%;
+}
+.name{
+    font-size: 18px;
+}
+
+.btnMargin{
+    margin: 2px;
+    font-size: 13px;
+    width: 150px;
+}
+.stat{
+    color: red;
+}
+.game{
+    display: grid;
+    grid-template-columns:repeat(3, min(150px));
+}
+
+.game > #board{
+    grid-column-start: span 2;
+    display: grid;
+    padding: 3rem;
 }
 
 .popup_form{
@@ -109,4 +177,11 @@ body {
 }
 .cancel_btn:hover{
     opacity: 1;
+<<<<<<< HEAD
 }
+=======
+}
+
+
+
+>>>>>>> parent of 4c8ef5c (Merge branch 'dev' into gamepage)

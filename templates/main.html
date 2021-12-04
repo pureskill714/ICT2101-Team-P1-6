@@ -3,7 +3,6 @@
     <title>Main menu</title>
 {% endblock %}
 {% block body %}
-<body oncontextmenu="return false";>
 <div class="container">
     <h1 id="index_title" class="text-center">Maze Driver</h1>
     <div class="row align-items-center">
@@ -21,22 +20,13 @@
         <div class="col text-center">
 
             <div class="form-group">
-                <a href="/selectlevel?" class="btn btn-primary main_button">Main Levels</a>
+                <a class="btn btn-primary main_button">Main Levels</a>
             </div>
             <div class="form-group">
                 <a class="btn btn-primary main_button">Custom Levels</a>
             </div>
             <div class="form-group">
-                <button id="open_form_btn" onclick="open_form_btn1()" class="btn btn-primary main_button">Configure Levels</button>
-            </div>
-            <div class="popup_form" id="my_form">
-                <form id="form" class="form_container" autocomplete=OFF>
-                <h1>Faciliator Login</h1>
-                <label>Password:</label>
-                <input type="password" name="password" id="password" placeholder="Enter your password" required autocomplete="off">
-                <button type="submit" id="login" onclick="validate()" class="login_btn">Login</button>
-                <button class="cancel_btn" onclick="close_btn()">Close</button>
-                </form>
+                <a class="btn btn-primary main_button">Configure Levels</a>
             </div>
             <div class="form-group">
                 <a class="btn btn-primary main_button">Exit</a>
@@ -53,8 +43,6 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="{{url_for('static', filename='js/main.js')}}"></script>
-
     <div class="row">
         <div class="col-sm">
 
@@ -70,6 +58,5 @@
         </div>
     </div>
 </div>
-</body>
 {% endblock %}
 
