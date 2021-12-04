@@ -40,8 +40,6 @@ def selectlevel():
 def Configlevelpage():
     return render_template('Configlevelpage.html')
 
-<<<<<<< HEAD
-=======
 @app.route('/gamepage', methods=['GET', 'POST'])
 def game():
     if request.method == 'POST':
@@ -71,6 +69,6 @@ def background_process_test():
     # else:
     #     flash("failed"+result[1])
     return ("nothing")
->>>>>>> parent of 4c8ef5c (Merge branch 'dev' into gamepage)
+
 if __name__ =="__main__":
     app.run(debug=True)

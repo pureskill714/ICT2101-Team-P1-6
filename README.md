@@ -1,6 +1,10 @@
 # ICT2101-Team-P1-6
 <<<<<<< HEAD
+<<<<<<< HEAD
 Develop a Web-Based Maze Game with integration with Wi-Fi Controlled Robotic Car
+=======
+Develop a Web-Based Maze Game with Wi-Fi Controlled Robotic Car
+>>>>>>> parent of 4c8ef5c (Merge branch 'dev' into gamepage)
 =======
 Develop a Web-Based Maze Game with Wi-Fi Controlled Robotic Car
 >>>>>>> parent of 4c8ef5c (Merge branch 'dev' into gamepage)
@@ -74,4 +78,7 @@ Develop a Web-Based Maze Game with Wi-Fi Controlled Robotic Car
 
 
 
+<<<<<<< HEAD
+>>>>>>> parent of 4c8ef5c (Merge branch 'dev' into gamepage)
+=======
 >>>>>>> parent of 4c8ef5c (Merge branch 'dev' into gamepage)
