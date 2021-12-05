@@ -20,14 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2089096f-d271-4ed1-a6cd-0d1273c47f2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/Configlevelpagestyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/Configlevelpagestyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/selectlevel.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/selectlevel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Configlevelpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Configlevelpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/selectlevel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/selectlevel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/maze.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/maze.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
