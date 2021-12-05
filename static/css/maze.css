@@ -196,7 +196,7 @@ div.layer div {
  * Goal colors
  */
 .goal {
-  background-color: #FFD700;
+  background-color: red;
   border: 1px solid #98720b;
 }
 /*
@@ -232,5 +232,13 @@ div.layer div {
   80% { transform: scale(0.85) translate(-1px, -1px); }
   90% { transform: scale(0.85) translate(1px, 2px); }
   100% { transform: scale(0.85) translate(1px, -2px);; }
+}
+
+#victory{
+    font-size: 60px;
+    color: green;
+    font-family: URW Chancery L, cursive;
+    text-align: center;
+
 }
 

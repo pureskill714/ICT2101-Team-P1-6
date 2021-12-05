@@ -13,7 +13,7 @@
                 <div class="row">
                 <article class="col-sm">
                    <figure class="big">
-                           <a href="mainMenu.html"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level1'
+                           <a id="lv1"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level1'
                                  title='Level 1'/></a>
                         <figcaption><b>Level 1</b></figcaption>
                     </figure>
@@ -21,7 +21,7 @@
                 </article>
                 <article class="col-sm">
                     <figure class="big"> <!adding images>
-                             <a href="mainMenu.html"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level2'
+                             <a id="lv2"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level2'
                                  title='Level 2'/></a>
                         <figcaption><b>Level 2</b></figcaption>
                     </figure>
@@ -29,7 +29,7 @@
 
                  <article class="col-sm">
                     <figure class="big">
-                              <a href="mainMenu.html"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level3'
+                              <a id="lv3"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level3'
                                  title='Level 3'/></a>
                          <figcaption><b>Level 3</b></figcaption>
                     </figure>
@@ -41,14 +41,14 @@
                 <div class="row">
                 <article class="col-sm">
                     <figure class="big">
-                         <a href="mainMenu.html"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level4'
+                         <a id="lv4"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level4'
                                  title='Level 4'/></a>
                          <figcaption><b>Level 4</b></figcaption>
                     </figure>
                 </article>
                 <article class="col-sm">
                     <figure class="big">
-                          <a href="mainMenu.html"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level5'
+                          <a id="lv5"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level5'
                                  title='Level 5'/></a>
                          <figcaption><b>Level 5</b></figcaption>
                     </figure>
@@ -56,14 +56,43 @@
 
                  <article class="col-sm">
                   <figure class="big">
-                             <a href="mainMenu.html"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level6'
+                             <a id="lv6"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='level6'
                                  title='Level 6'/></a>
                       <figcaption><b>Level 6</b></figcaption>
                     </figure>
                 </article>
                     </div>
     </section>
+    <form id="levelSelected" method="post" action="{{ url_for('game') }}">
+        <input id="level" name="level" type="hidden" value="">
+    </form>
       <a href="main?"><button class="backbtn">Back to Main Menu</button></a>
 
 </main>
+<script>
+    $("#lv1").click(function(){
+        $('#level').val('1');
+        $( "#levelSelected" ).submit();
+    });
+    $("#lv2").click(function(){
+        $('#level').val('2');
+        $( "#levelSelected" ).submit();
+    });
+    $("#lv3").click(function(){
+        $('#level').val('3');
+        $( "#levelSelected" ).submit();
+    });
+    $("#lv4").click(function(){
+        $('#level').val('4');
+        $( "#levelSelected" ).submit();
+    });
+    $("#lv5").click(function(){
+        $('#level').val('5');
+        $( "#levelSelected" ).submit();
+    });
+    $("#lv6").click(function(){
+        $('#level').val('6');
+        $( "#levelSelected" ).submit();
+    });
+</script>
 {% endblock %}

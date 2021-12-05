@@ -1,35 +1,48 @@
-$(document).ready(function(){
+var timeElapsed = 0;
+var timerID = -1;
+function tick() {
+    timeElapsed++
+    document.getElementById("time").innerHTML = timeElapsed;
+}
 
+function start() {
+    if(timerID == -1){
+        timerID = setInterval(tick, 1000);
+    }
+}
+
+function stop() {
+    if(timerID != -1){
+        clearInterval(timerID)
+        timerID = -1
+    }
+}
+
+function calculateScore(time,count,level=1){
+    var score = Math.round(((1/time) * 500 * level)/count*10)
+    return score;
+}
+$(document).ready(function(){
+    start();
+    var stop = "s";
     $('#forward').click(function(){
         $("#cmds").append("Move forward<br>");
         cmd+="w";
-//        $("#cmdList").val(function() {
-//            return this.value + "1";
-//        });
     });
 
     $('#backward').click(function(){
         $("#cmds").append("Move backward<br>");
-        cmd+="s";
-//        $("#cmdList").val(function() {
-//            return this.value + "2";
-//        });
+        cmd+="x";
     });
 
     $('#left').click(function(){
         $("#cmds").append("Move left<br>");
         cmd+="a";
-//        $("#cmdList").val(function() {
-//            return this.value + "3";
-//        });
     });
 
     $('#right').click(function(){
         $("#cmds").append("Move right<br>");
         cmd+="d";
-//        $("#cmdList").val(function() {
-//            return this.value + "4";
-//        });
     });
 
     $('#clear').click(function(){
@@ -40,6 +53,17 @@ $(document).ready(function(){
     $('#submit').click(function(){
 //        alert(cmd);
         $(this).prev().val(cmd);
+    });
+    $("#stop").click(function(){
+
+        $.ajax({
+          url: "/sendcommand",
+          type: "get",
+          data: {cmd: stop},
+          success: function(response) {
+            var new_html = response.html;
+          },
+        });
     });
 
 
