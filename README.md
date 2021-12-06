@@ -88,13 +88,13 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
     git commit -a -m "added feature to <feature_name> branch"
     git push
     
-**3) Merge to completed Feature branch to dev branch:** <br>
+**3) Merge completed Feature branch to dev branch:** 
 
     3.1) After code reviewer/development lead approved, merge completed feature branch into dev
             3.1.1) Navigate to ull requests on Github respo 
             3.1.2) Click one new pull request 
             3.1.3) Select dev branch and the corresponding feature branch to merge 
-            3.1.4) Select Create pull request button <
+            3.1.4) Select Create pull request button
             3.1.5) Input meaningful comment and title 
             3.1.6) Select 2 developement lead for reviewers setting 
             3.1.7) Assign Labels according to the type of feature and click on Create Pull Request 
@@ -104,6 +104,19 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
     3.2 Delete feature branch once merge to dev branch is completed
             3.2.1) OnlY developer lead are able to delete any feature branch.
             3.2.2) git branch -d <feature_name> branch
+            
+ **4)  Issues for bug fixes and other maintenance:** 
+ 
+    4.1) Issue/bug found in the dev branch, developer will branch out from dev branch and resolved from the specify branch
+    4.2) Issue/bug found in the feature/UI branch, developer will continue to resolved from that branch.
+    4.3) Only merge back to dev branch once issues have been resolved and approved by the developer lead.
+    4.3) Additonally issue/bug/enhancement found will have to create a new issue
+            4.3.1) Navigate to Issues tab on Github respo
+            4.3.2) click on new issue and write meaningful title and comment 
+            4.3.3) Assign the issue to respective developer and to a developer lead (verify and close the issue)
+            4.3.4) Assign a label depend on the issue type
+            4.3.5) Click on Submit new issue once all the above field is fill up.
+            4.3.6) Developer can only closed the issue once assigned developer lead commented "Fixed" on the issue.
   
 
 ## User Acceptance Test
