@@ -1,0 +1,57 @@
+html
+{
+    
+  
+}
+
+
+.containerbody
+{
+    min-width: 150px;
+    background-image: url('/static/images/bluemoon.png')}});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sub_header
+{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+.img-thumbnail
+{
+     width: 150px;
+}
+
+#first
+{
+     margin-left: 220px;
+     margin-top: 20px;
+}
+
+figcaption
+{
+   font-style: italic;
+   color: black;
+   margin-left: 50px;
+}
+
+#second
+{
+     margin-left: 220px;
+     margin-top: 10px;
+}
+
+
+
+.img-thumbnail:hover
+{
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px black;
+}

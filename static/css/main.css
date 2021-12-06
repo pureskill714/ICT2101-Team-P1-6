@@ -1,0 +1,246 @@
+#index_title {
+    font-size: 89px;
+}
+.img {
+    width: 200px;
+    border-radius: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+#Mainheader
+{
+    margin-top: 20px;
+    margin-left:370px;
+    text-align: center;
+    font-size: 92px;
+    color: purple;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0.5px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 10px 6px rgba(16,16,16,0.4),
+    1px 17px 10px rgba(16,16,16,0.2),
+    1px 20px 20px rgba(16,16,16,0.2),
+    1px 25px 40px rgba(16,16,16,0.4);
+}
+img.puttputt {
+    width: 250px;
+    border-radius: 50px;
+    float: left;
+    margin-right: 10px;
+}
+.navbtn
+{
+    margin-top: 25px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    margin-left:10px;
+    float:right;
+}
+#mainbtn{
+    margin-left:200px;
+    width: 120px;
+}
+.navbtn:hover
+{
+   background-color: purple;
+}
+
+hr{
+    width:100%;
+    border-top: 5px solid #095484;
+}
+
+img.maze {
+    width: 250px;
+}
+em {
+    color: blue;
+    font-style: normal;
+}
+div.mascot {
+    position: absolute;
+    right: -1px;
+    bottom: 277px;
+    border-radius: 50px;
+    font-size: 37px;
+}
+#connect_button {
+    height: 150px;
+    width: 300px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 30px;
+     border-radius: 12px;
+}
+#connect_button:hover {
+    background-color: purple;
+}
+body {
+    background-color: lightblue;
+}
+
+.main_button{
+    width: 250px;
+    height: 80px;
+    margin: 20px;
+    justify-content: center;
+
+}
+#img {
+    width: 200px;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header
+{
+    margin-top: 20px;
+    text-align: center;
+    color: purple;
+}
+
+.box {
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 3px;
+    margin: 5px;
+}
+
+.smallbox{
+    border-style: solid;
+    border-width: 3px;
+    margin: 1px;
+    height:250px;
+}
+.leftline{
+    border-left: 3px solid;
+}
+
+.box1 {
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 3px;
+    margin: 2px;
+    height: 78%;
+}
+.box2 {
+    border-style: solid;
+    border-width: 3px;
+    margin: 3px;
+    width: 99%;
+}
+.name{
+    font-size: 18px;
+}
+
+.btnMargin{
+    margin: 2px;
+    font-size: 13px;
+    width: 118px;
+}
+.stat{
+    color: red;
+}
+.game{
+    display: grid;
+    grid-template-columns:repeat(3, min(150px));
+}
+
+.game > #board{
+    grid-column-start: span 2;
+    display: grid;
+    padding: 3rem;
+}
+
+.popup_form{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -10%);
+    border: 3px solid;
+    display:none;
+}
+
+.form_container{
+    max-width:350px;
+    padding:10px;
+    background-color:white;
+}
+.form_container h1{
+    text-align: center;
+    color: #00004d;
+    font-size:30px;
+}
+
+.form_container input[type=text]{
+    width:100%;
+    padding:15px;
+    margin:5px 0px 22px 0px;
+    border: 1px solid #f1f1f1;
+    background-color: #fff;
+}
+
+.form_container input[type=password]{
+    width:100%;
+    padding:15px;
+    margin:5px 0px 22px 0px;
+    border: 1px solid #f1f1f1;
+    background-color: #fff;
+}
+
+.form_container input[type=text]:focus{
+    background-color: #f1f1f1;
+    outline: none;
+}
+.form_container input[type=password]:focus{
+    background-color: #f1f1f1;
+    outline: none;
+}
+
+.login_btn{
+    background-color: #800033;
+    color:white;
+    padding: 16px 20px;
+    cursor:pointer;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    width: 100%;
+    outline: none;
+}
+
+.cancel_btn{
+    background-color: #cc0000;
+    color:white;
+    padding: 16px 20px;
+    cursor:pointer;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    width: 100%;
+    outline: none;
+}
+
+.login_btn:hover{
+    opacity: 1;
+}
+.cancel_btn:hover{
+    opacity: 1;
+}
