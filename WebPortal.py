@@ -42,7 +42,6 @@ def main():
 @app.route('/selectlevel')
 def selectlevel():
     return render_template('selectlevel.html')
-
 @app.route('/customlevel')
 def customlevel():
     return render_template('Customlevelpage.html')

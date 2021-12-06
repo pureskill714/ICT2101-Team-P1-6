@@ -37,9 +37,9 @@ class LevelController():
         lv1.setMap(start, end, map)
 
         lv2 = Level("Level 2",2)
-        map = [[1, 1, 0, 0, 1, 1], [0, 0, 0, 0, 1, 1], [1, 1, 1, 0, 0, 0]]
-        start = [0, 1]
-        end = [5, 2]
+        map = [[1, 1, 0], [1, 1, 0], [0, 0, 0], [0, 0, 1],[1, 0, 1],[1, 0, 1]]
+        start = [1, 5]
+        end = [2,0]
         lv2.setMap(start, end, map)
 
         lv3 = Level("Level 3",3)
@@ -49,7 +49,7 @@ class LevelController():
         lv3.setMap(start, end, map)
 
         lv4 = Level("Level 4",4)
-        map = [[0,0,1,1,1,1],[0,0,1,1,1,1],[0,0,1,1,1,1],[0,0,0,0,1,1],[0,0,0,0,0,0], [0,0,1,0,0,0]]
+        map = [[0,0,0,0,1,1],[0,1,1,1,0,1],[0,0,0,0,0,1],[0,0,1,0,1,1],[1,1,1,0,1,1], [1,0,0,0,0,0]]
         start = [5, 5]
         end = [0, 0]
         lv4.setMap(start, end, map)
@@ -62,15 +62,15 @@ class LevelController():
 
         lv6 = Level("Level 6",6)
         map = [[0,1,1,0,0,0],[0,0,1,0,1,0],[1,0,1,0,1,0],[0,0,1,0,1,0],[0,1,0,0,0,1],[0,0,0,1,1,1]]
-        start = [0, 0]
-        end = [5, 3]
+        start = [5, 3]
+        end = [0, 0]
         lv6.setMap(start, end, map)
 
-        cus1 = Level("Custom 1", 71)
+        lv7 = Level("Custom 1",7)
         map = [[0,1,1,0,0,0],[0,0,1,0,1,0],[1,0,1,0,1,0],[0,0,1,0,1,0],[0,1,0,0,0,1],[0,0,0,1,1,1]]
         start = [0, 0]
         end = [5, 3]
-        cus1.setMap(start, end, map)
+        lv7.setMap(start, end, map)
 
         if type == "1":
             map = lv1
@@ -90,8 +90,8 @@ class LevelController():
         elif type == "6":
             map = lv6
             return map
-        elif type == "71":
-            map = cus1
+        elif type == "7":
+            map = lv7
             return map
         else:
             return False
