@@ -6,14 +6,11 @@ class CarController(Car):
     def __init__(self,name,pwd):
         super().__init__(name,pwd)
     """
-    establish connection with the car
-    input1: car name;
-    input2: pwd;
-    output: boolean;
+    set up bluetooth connection
     """
-    def bluetoothSetUp(self):
+    def bluetoothSetUp(self,port):
         ser = serial.Serial()
-        ser.port = "COM15"
+        ser.port = port
         ser.baudrate = 9600
         ser.bytesize = serial.EIGHTBITS  # number of bits per bytes
         ser.parity = serial.PARITY_NONE  # set parity check: no parity
@@ -26,16 +23,22 @@ class CarController(Car):
         ser.dsrdtr = False  # disable hardware (DSR/DTR) flow control
         ser.writeTimeout = 2  # timeout for write
         return ser
-
-    def openConnection(self):
-        ser = self.bluetoothSetUp()
+    """
+    open connection to communicate
+    return boolean + object or error message
+    """
+    def openConnection(self,port):
+        ser = self.bluetoothSetUp(port)
         try:
             ser.open()
             return True, ser
         except:
             return False, "Open connection fail"
 
-
+    """
+    open connection to communicate
+    return boolean + object or error message
+    """
     def testConnection(self,ser):
         if ser[0]:
             if ser[1].isOpen():
@@ -43,11 +46,20 @@ class CarController(Car):
             return False, "connection not open"
         return False, ser[1]
 
-    def closeConnection(self):
-        ser = self.bluetoothSetUp()
+    """
+    close connection
+    """
+    def closeConnection(self,port):
+        ser = self.bluetoothSetUp(port)
         ser.close()
         # print("conn closed")
 
+    """
+    sending command to car
+    input1: communcation object
+    input2: command
+    return boolean + message
+    """
     def sendCommand(self,ser,cmd):
         try:
             ser.flushInput()  # flush input buffer, discarding all its contents
@@ -73,23 +85,40 @@ class CarController(Car):
     inout2: distance;
     input3: connection status
     input4: state (moving, idle, pause)
-    
     '''
     def setCarStat(self,speed,dist,status,state):
         Car.setSpeed(self,speed)
         Car.setDist(self,dist)
         Car.setStatus(self,status)
         Car.setState(self,state)
-
+    """
+    use to get the data of car status
+    """
     def getCarStat(self):
         stat = {}
         stat["status"] = Car.getStatus(self)
         stat["state"] = Car.getState(self)
         stat["dist"] = Car.getDist(self)
         stat["speed"] = Car.getSpeed(self)
-        # stat = [Car.getStatus(self),Car.getState(self),Car.getDist(self),Car.getSpeed(self)]
         return stat
-# car = CarController("sasas","asasas")
-# car.setCarStat("3m/h", "10.7m", "Connected","Idle")
-# stat = car.getCarStat()
-# print(stat)
+    """
+    use to verify password
+    input: password
+    return boolean
+    """
+    def verifyPwd(self,pwd):
+        if pwd == Car.getPwd(self):
+            return True
+        return False
+    """
+    use to change password
+    input1: new password
+    input2: old password
+    return boolean
+    """
+    def changePwd(self,old,new):
+        if self.verifyPwd(old):
+            Car.setPwd(self,new)
+            return True
+        return False
+

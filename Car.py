@@ -4,10 +4,9 @@ class Car:
     # instance attributes
     def __init__(self, name, pwd):
         self.carName = name
-        self.pwd = pwd
+        self.__pwd = pwd
         self.status = "disconnect"
         self.state = ""
-        self.pwd = ""
         self.speed = 0
         self.dist = 0
 
@@ -23,6 +22,9 @@ class Car:
     def getState(self):
         return self.state
 
+    def getPwd(self):
+        return self.__pwd
+
     def setSpeed(self,speed):
         self.speed = speed
 
@@ -34,3 +36,6 @@ class Car:
 
     def setState(self,state):
         self.state = state
+
+    def setPwd(self,pwd):
+        self.__pwd = pwd

@@ -12,14 +12,15 @@ app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 #instantiate new car
 car=CarController("1001","123456")
-conn = car.openConnection()
+port="COM15"
+conn = car.openConnection(port)
 
 #index page
 @app.route('/', methods=['GET', 'POST'])
 def index():
     data=1
     if request.method == 'POST':
-        car.closeConnection()
+        car.closeConnection(port)
         flash("Close Connection")
     return render_template('index.html',data=data)
 
@@ -75,17 +76,17 @@ def game():
 def background_process_test():
     cmd = request.args.get('cmd')
     print(f"cmd received={cmd}")
-    # connected = car.testConnection(conn)
-    # if connected[0]:
-    #     result = car.sendCommand(connected[1],cmd)
-    # # flash(result)
-    #     print(result[1])
-    # else:
-    #     print(connected[1])
-    # if(result[0]):
-    #     flash("success"+result[1])
-    # else:
-    #     flash("failed"+result[1])
+    connected = car.testConnection(conn)
+    if connected[0]:
+        result = car.sendCommand(connected[1],cmd)
+    # flash(result)
+        print(result[1])
+    else:
+        print(connected[1])
+    if(result[0]):
+        flash("success"+result[1])
+    else:
+        flash("failed"+result[1])
     return ("nothing")
 
 if __name__ =="__main__":
