@@ -110,24 +110,24 @@
 <!--            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
           </div>
           <div class="modal-body text-center">
-              <div class="row"id="victory">
-                  Victory
+              <div class="row">
+                  <p id="victory">VICTORY</p>
               </div>
               <div class="row">
-                  Your score: <p id="score"></p>
+                  <p id="large">Your score: </p><em id="score"></em>
               </div>
             <div class="row">
 
             </div>
           </div>
-          <div class="modal-footer">
+          <div class="modal-footer float-center">
               <a href="{{url_for('main')}}">
-                  <button type="button" class="btn btn-primary pull-left">Back to main</button>
+                  <button type="button" class="btn btn-primary" style="float:left;">Back to main</button>
               </a>
-            <button type="button" class="btn btn-success pull-right" onclick="location.reload()">Play Again</button>
+            <button type="button" class="btn btn-success" onclick="location.reload()">Play Again</button>
               <form method="post">
                   <input type="hidden" name="level" value="{{data['levelNum']}}">
-                  <button type="submit" class="btn btn-warning pull-right">Next Level</button>
+                  <button type="submit" class="btn btn-warning">Next Level</button>
               </form>
           </div>
         </div>

@@ -239,14 +239,27 @@ div.layer div {
 }
 
 #victory{
-    font-size: 60px;
-    color: green;
+    font-size: 90px;
+    color: red;
     font-family: URW Chancery L, cursive;
     text-align: center;
+    font-weight: bold;
 }
-
+#score{
+    font-size: 60px;
+    color: purple;
+    text-align: center;
+}
 #legend{
     width:200px;
     float: left;
+}
+#large{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.btnCenter{
+    text-align:center;
 }
 
