@@ -168,7 +168,7 @@ https://user-images.githubusercontent.com/72610274/144871833-619afa21-03fb-44c9-
     - Branch Coverage<br />
       ![2](https://user-images.githubusercontent.com/72610274/144872223-9af074eb-5462-4ae6-a609-c86928d3769a.PNG)
     - We use `pytest` for testing and `coverage` for calculate code coverage.<br />
-      A test class need to be create and write test function with `assert` and run the command, the it will auto call those function and produce a pass fail report of the function run.<br />
+      A test class need to be create and write test function with `assert` and run the command, then it will auto call those function and produce a pass fail report of the function run.<br />
       `coverage` will help to calculate the execution of the file is is being run and generate the coverage report.<br />
       The percentage is not 100% because there are some case where we are unable to simulate.
 - Test Suite Execution Instructions<br />
