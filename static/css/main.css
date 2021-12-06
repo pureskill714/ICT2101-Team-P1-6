@@ -15,6 +15,7 @@
     margin-top: 20px;
     margin-left:370px;
     text-align: center;
+    font-size: 92px;
     color: purple;
     font-weight: bold;
     text-shadow: 0.5px 0.5px 0.5px #919191,
@@ -56,6 +57,7 @@ img.puttputt {
 }
 #mainbtn{
     margin-left:200px;
+    width: 120px;
 }
 .navbtn:hover
 {
@@ -106,7 +108,6 @@ body {
 #img {
     width: 200px;
     border-radius: 50px;
-    display: block;
     margin-left: auto;
     margin-right: auto;
 }
