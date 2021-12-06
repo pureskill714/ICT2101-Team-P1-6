@@ -11,15 +11,25 @@
     <script type=text/javascript src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     {% block head %}{% endblock %}
-  </head>
+
   <body>
     <div class="container">
-    {% for message in get_flashed_messages() %}
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      {{ message }}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    {% endfor %}
+<!--     <img src="{{url_for('static', filename='images/PuttPutt.png')}}" alt="Car Image Not Found" id="img1" />-->
+      <nav class="navbar navbar-expand-sm ">
+      <h1 id="Mainheader">Maze Driver</h1>
+       <div class="collapse navbar-collapse" id="navigationbarNav">
+         <a href="main?"><button class="navbtn" id="mainbtn">Main Menu</button></a>
+         <a href="/"><button class="navbtn" id="exitbtn">Exit</button></a>
+       </div>
+      </nav>
+
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+
 
     {% block body %}{% endblock %}
     </div>
