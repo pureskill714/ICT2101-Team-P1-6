@@ -151,6 +151,39 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
 
 ## Whitebox Testing
 - Selected class to demonstrate the test code
-- Test Cases
-- Test Suite Execution Instructions
+    - `CarController` Class is used (In CarController.py located at main directory)
+- Test Cases (In testCarController.py)
+    - `test_instance()` to check if instance is created
+    - `test_password()` to check if password is set correctly
+    - `test_statset` to check if car stat is set correctly
+    - `test_changepassword()` to check if car password can be changed
+    - `test_bluetothSetup()` to check if bluetooth configuration is set
+    - `test_openconnection()` to check if bluetooth can be open
+    - `test_testconnection()` to test if the connection is not lost
+    - `test_sendCommand()` to test if command can be send successfully
+- Code coverage statistic
+    - Statement Coverage
+    - Branch Coverage
+    - We use `pytest` for testing and `coverage` for calculate code coverage.<br />
+      A test class need to be create and write test function with `assert` and run the command, the it will auto call those function and produce a pass fail report of the function run.<br />
+      `coverage` will help to calculate the execution of the file is is being run and generate the coverage report.<br />
+      The percentage is not 100% because there are some case where we are unable to simulate.
+- Test Suite Execution Instructions<br />
+    Test statement coverage
+    ```bash
+    coverage run -m pytest testCarController.py
+    ```
+    To get the report
+    ```bash
+    coverage report
+    ```
+    Test branch coverage
+    ```bash
+    coverage run --branch -m pytest testCarController.py
+    ```
+    To get the report
+    ```bash
+    coverage report
+    ```
+
 - video for Test Suite Execution
