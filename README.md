@@ -163,9 +163,9 @@ https://user-images.githubusercontent.com/72610274/144871833-619afa21-03fb-44c9-
     - `test_testconnection()` to test if the connection is not lost
     - `test_sendCommand()` to test if command can be send successfully
 - Code coverage statistic
-    - Statement Coverage
+    - Statement Coverage<br />
       ![1](https://user-images.githubusercontent.com/72610274/144872048-348b20ab-f3b7-4915-9582-f2dd6d68b5f4.PNG)
-    - Branch Coverage
+    - Branch Coverage<br />
       ![2](https://user-images.githubusercontent.com/72610274/144872223-9af074eb-5462-4ae6-a609-c86928d3769a.PNG)
     - We use `pytest` for testing and `coverage` for calculate code coverage.<br />
       A test class need to be create and write test function with `assert` and run the command, the it will auto call those function and produce a pass fail report of the function run.<br />
