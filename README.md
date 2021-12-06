@@ -82,16 +82,29 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
     
 **2) Commit to Feature Progress:**
 
-    - Commit and push working progress of `feature/<feature_name>` branch to that specifyy feature branch with modify code once the component of the feature is completed and         unit testing is done
+    - Commit and push working progress of feature/<feature_name> branch to that specifyy feature branch with modify code once the component of the feature is completed and unit testing is done
     
     # add commit messgae and push the modify code changes to Github repo of the specify feature once componenet is complete
     git commit -a -m "added feature to <feature_name> branch"
     git push
     
-**3) Merge to completed Feature branch to dev branch:**  
+**3) Merge to completed Feature branch to dev branch:** <br>
+
+    3.1) After code reviewer/development lead approved, merge completed feature branch into dev
+            3.1.1) Navigate to ull requests on Github respo 
+            3.1.2) Click one new pull request 
+            3.1.3) Select dev branch and the corresponding feature branch to merge 
+            3.1.4) Select Create pull request button <
+            3.1.5) Input meaningful comment and title 
+            3.1.6) Select 2 developement lead for reviewers setting 
+            3.1.7) Assign Labels according to the type of feature and click on Create Pull Request 
+            3.1.8) Once approval given from the two 2 development lead, click on merge pull request button 
+            3.1.9) Click on the confirm merge button
+                   
+    3.2 Delete feature branch once merge to dev branch is completed
+            3.2.1) OnlY developer lead are able to delete any feature branch.
+            3.2.2) git branch -d <feature_name> branch
   
-     - After code reviewer/development lead approved, merge completed feature branch into dev
-     - Delete feature branch
 
 ## User Acceptance Test
 - Use case Diagram
