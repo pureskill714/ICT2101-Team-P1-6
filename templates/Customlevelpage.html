@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block head %}
+   <title>Selection Level</title>
+   <link rel="stylesheet" href="{{url_for('static', filename='css/selectlevel.css')}}" />
+    <style>
+      .containerbody
+      {
+         height: 500px;
+      }
+        figcaption
+      {
+        margin-left: 20px;
+      }
+     </style>
+{% endblock %}
+{% block body %}
+
+<main class="containerbody">
+    <br>
+     <p style="text-align:center; font-size:35px; color:red;text-transform: uppercase;font-family: verdana;" id="sub_header">SELECT CUSTOM LEVEL</p>
+     <section id="first">
+                <div class="row">
+                <article class="col-sm">
+                   <figure class="big">
+                           <a id="cus1"><img class="img-thumbnail" src="{{url_for('static', filename='images/maze.JPG')}}" alt='cus1'
+                                 title='Custom Level 1'/></a>
+                        <figcaption><b>Custom Level 1</b></figcaption>
+                    </figure>
+                </article>
+                </div>
+    </section>
+
+   <section id="second">
+                <div class="row">
+                </div>
+   </section>
+    <form id="levelSelected" method="post" action="{{ url_for('game') }}">
+        <input id="level" name="level" type="hidden" value="">
+    </form>
+
+</main>
+<script>
+    $("#cus1").click(function(){
+        $('#cus1').val('71');
+        $( "#levelSelected" ).submit();
+    });
+</script>
+{% endblock %}

@@ -66,6 +66,12 @@ class LevelController():
         end = [5, 3]
         lv6.setMap(start, end, map)
 
+        cus1 = Level("Custom 1", 71)
+        map = [[0,1,1,0,0,0],[0,0,1,0,1,0],[1,0,1,0,1,0],[0,0,1,0,1,0],[0,1,0,0,0,1],[0,0,0,1,1,1]]
+        start = [0, 0]
+        end = [5, 3]
+        cus1.setMap(start, end, map)
+
         if type == "1":
             map = lv1
             return map
@@ -83,6 +89,9 @@ class LevelController():
             return map
         elif type == "6":
             map = lv6
+            return map
+        elif type == "71":
+            map = cus1
             return map
         else:
             return False
