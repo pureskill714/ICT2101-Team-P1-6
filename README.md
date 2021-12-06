@@ -53,9 +53,11 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
 **Master Branch Management:**
 1. only dev branch can be merged to the main branch
 2. Always represent the production ready state
+3. Only `Development lead` can merge dev branch to master branch
+    - Both Development lead have to approve with the merging to proceed
 
 **Release Branch Management**
-1. Developers can create release branch `rel_<version_num>`
+1. Development lead can create release branch `rel_<version_num>`
 2. All releases also branch off dev but merge back into BOTH dev and master
 
 **Hotfix Branch Management**
