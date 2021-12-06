@@ -143,10 +143,11 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
   - Once all done and review by development lead, development lead will closed the hotfix issues
 
 ## User Acceptance Test
-- Use case Diagram
-- System State Diagram
+- Use case Diagram (No change from M2)
+- System State Diagram (No change from M2)
 - Video for System Test
-[![UAT TEST VIDEO](https://i9.ytimg.com/vi/8NqqqXunhAQ/maxresdefault.jpg?time=1638801300000&sqp=CJS_uI0G&rs=AOn4CLAYftxYuwNItzd8ElvPJKX35UTVSQ)](https://www.youtube.com/embed/8NqqqXunhAQ) </br>
+
+https://user-images.githubusercontent.com/72610274/144871833-619afa21-03fb-44c9-8782-d9237b89b661.mp4
 
 
 ## Whitebox Testing
@@ -163,7 +164,9 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
     - `test_sendCommand()` to test if command can be send successfully
 - Code coverage statistic
     - Statement Coverage
+      ![1](https://user-images.githubusercontent.com/72610274/144872048-348b20ab-f3b7-4915-9582-f2dd6d68b5f4.PNG)
     - Branch Coverage
+      ![2](https://user-images.githubusercontent.com/72610274/144872223-9af074eb-5462-4ae6-a609-c86928d3769a.PNG)
     - We use `pytest` for testing and `coverage` for calculate code coverage.<br />
       A test class need to be create and write test function with `assert` and run the command, the it will auto call those function and produce a pass fail report of the function run.<br />
       `coverage` will help to calculate the execution of the file is is being run and generate the coverage report.<br />
@@ -187,3 +190,7 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
     ```
 
 - video for Test Suite Execution
+
+
+https://user-images.githubusercontent.com/72610274/144871777-bf14f20d-02ee-4436-96ca-badefa023a6f.mp4
+
