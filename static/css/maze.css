@@ -6,6 +6,10 @@ body {
   transition: 0.2s ease;
   text-align: center;
 }
+#Mainheader
+{
+    margin-left:400px;
+}
 body.success  {
   background-color: #b7f0b7;
   transition: 0.2s ease;

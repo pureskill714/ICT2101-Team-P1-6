@@ -3,36 +3,7 @@ html
     
   
 }
-.img {
-    width: 200px;
-    border-radius: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
-  }
 
-#header
-{
-    margin-top: 20px;
-    text-align: center;
-    color: purple;
-    font-weight: bold;
-    text-shadow: 0.5px 0.5px 0.5px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 9px 1px #919191,
-        1px 10px 1px #919191,
-    1px 10px 6px rgba(16,16,16,0.4),
-    1px 17px 10px rgba(16,16,16,0.2),
-    1px 20px 20px rgba(16,16,16,0.2),
-    1px 25px 40px rgba(16,16,16,0.4);
-}
 
 .containerbody
 {
@@ -76,25 +47,7 @@ figcaption
      margin-top: 10px;
 }
 
-.backbtn
-{
-    margin-top: 5px;
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition-duration: 0.4s;
-    border-radius: 8px;
-}
 
-.backbtn:hover
-{
-   background-color: purple;
-}
 
 .img-thumbnail:hover
 {

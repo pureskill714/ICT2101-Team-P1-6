@@ -1,11 +1,19 @@
 {% extends 'base.html' %}
 {% block head %}
     <title>Maze Driver</title>
+    <style>
+        #mainbtn{
+            display:none;
+        }
+        #exitbtn{
+            margin-left:320px;
+        }
+    </style>
 {% endblock %}
 
 {% block body %}
 <div class="container">
-    <h1 id="index_title" class="text-center">Maze Driver</h1>
+<!--    <h1 id="index_title" class="text-center">Maze Driver</h1>-->
     <div class="row align-items-center">
         <div class="col">
             <img class="rounded float-start maze" src="{{url_for('static', filename='images/maze.JPG')}}" />

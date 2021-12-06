@@ -8,7 +8,7 @@
     grid-column-start: span 2;
     display: grid;
     padding: 3rem;
-    height: 550px;
+    height: 400px;
     width: 700px;
 }
 
@@ -25,22 +25,3 @@
     margin: 10px;
 }
 
-.backbtn
-{
-    margin-left: 50px;
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition-duration: 0.4s;
-    border-radius: 8px;
-
-}
-.backbtn:hover
-{
-   background-color: purple;
-}
