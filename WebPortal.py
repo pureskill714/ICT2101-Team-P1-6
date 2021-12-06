@@ -1,6 +1,6 @@
-
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request, flash, redirect
 from CarController import CarController
+from Level import LevelController
 import serial
 import time
 
@@ -24,7 +24,7 @@ conn = car.openConnection()
 def main():
     # if conn[0]:
     if True:
-        flash("Connect successfully")
+        flash("Robot Car is connected")
         car.setCarStat(0,0,"connected","idle")
         data= car.getCarStat()
         return render_template('main.html',data=data) #data = what u want to pass to html page eg. see main.html
@@ -43,15 +43,22 @@ def Configlevelpage():
 
 @app.route('/gamepage', methods=['GET', 'POST'])
 def game():
+    car.setCarStat("10m/h", "12m", "Connected", "Idle")
     if request.method == 'POST':
-        cmd = request.form['cmdList']
-    car.setCarStat("10m/h","12m","Connected","Idle")
-    data = car.getCarStat()
-    data["map"] = [[1,1,0],[1,0,0],[0,0,1]]
-    data["start"] = [0,2]
-    data["end"] = [2,0]
-    # print(data["speed"])
-    return render_template('gamepage.html',data=data)
+        back = request.referrer
+        level = request.form['level']
+        if int(level) > 6:
+            level= "6"
+            flash("Max level reached")
+        map = LevelController().getMapSetUp(level)
+        if map!=False:
+            data = car.getCarStat()
+            data["map"] = map.getMap()
+            data["start"] = map.getStart()
+            data["end"] = map.getEnd()
+            data['level'] = map.getName()
+            data['levelNum'] = map.getLevelNumber()+1
+            return render_template('gamepage.html',data=data)
 
 #background process happening without any refreshing
 @app.route('/sendcommand')

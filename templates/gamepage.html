@@ -13,14 +13,14 @@
             <div class="row text-center">
                 <p><b>Control Center</b></p>
             </div>
+
             <div class="row smallbox">
                 <div class="col">
-<!--                    onclick="up()"onclick="down()"onclick="left()"onclick="right()"-->
                     <p> Choose the following commands: </p>
-                    <button id="forward"  type="button" class="btn btn-primary btnMargin">Move Forward</button>
-                    <button id="backward" type="button" class="btn btn-primary btnMargin">Move Backward</button>
-                    <button id="left" type="button"  class="btn btn-primary btnMargin">Move Left</button>
-                    <button id="right" type="button"  class="btn btn-primary btnMargin">Move Right</button>
+                    <button id="forward"  type="button" class="btn btn-primary btnMargin">Move Forward</button><br>
+                    <button id="backward" type="button" class="btn btn-primary btnMargin">Move Backward</button><br>
+                    <button id="left" type="button" class="btn btn-primary btnMargin">Move Left</button><br>
+                    <button id="right" type="button" class="btn btn-primary btnMargin">Move Right</button>
                 </div>
                 <div class="col leftline">
                     <p>Selected command(s):{{a}}</p>
@@ -29,19 +29,22 @@
                     </div>
                 </div>
             </div>
+
             <div class="row text-center">
                 <div class="col">
                     <button id="clear" type="button" class="btn btn-primary btnMargin">Clear Command</button>
                 </div>
+
                 <div class="col">
-                    <form method="post">
-                        <input id="cmdList" name="cmdList" type="hidden" value="">
-                        <input id="submit" type="submit" class="btn btn-primary btnMargin" value="Execute Command">
-                    </form>
                     <a id="run" class="btn btn-primary btnMargin">Run</a>
+                </div>
+
+                <div class="col">
+                    <button id="stop" type="button" class="btn btn-primary btnMargin">Stop Car</button>
                 </div>
             </div>
         </div>
+
         <div class="col box">
             <div class="row">
                 <p class="text-center"><b>Dashboard</b></p>
@@ -63,7 +66,7 @@
                 </div>
                 <div class="row box2">
                     <div class="col">
-                        <p>Time:</p>
+                        <p>Time: <em id="time" class="stat">0</em> sec</p>
                     </div>
                     <div class="col">
                         <p>Run Count: <em id="count" class="stat"></em></p>
@@ -74,7 +77,7 @@
     </div>
 
     <div class="form-control">
-        <p>Virtual Map</p>
+        <p>Virtual Map ({{data["level"]}})</p>
         <div class="row">
 <!--            <div class="game">-->
 <!--                <div id="board">-->
@@ -87,26 +90,49 @@
                         <div id="sprites" class="layer"></div>
                         <div id="success-msg">Goal reached! Tap the maze to change levels.</div>
                     </div>
-
-              <!-- controls-->
-<!--              <div id="controls">-->
-<!--                <button id="up"></button>-->
-<!--                <div id="horiz">-->
-<!--                   <button id="left"></button>-->
-<!--                   <button id="right"></button>-->
-<!--                </div>-->
-<!--                 <button id="down"></button>-->
-<!--               </div>-->
-<!--              </div>-->
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+<!--            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>-->
+<!--            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+          </div>
+          <div class="modal-body text-center">
+              <div class="row"id="victory">
+                  Victory
+              </div>
+              <div class="row">
+                  Your score: <p id="score"></p>
+              </div>
+            <div class="row">
+
+            </div>
+          </div>
+          <div class="modal-footer">
+              <a href="{{url_for('main')}}">
+                  <button type="button" class="btn btn-primary pull-left">Back to main</button>
+              </a>
+            <button type="button" class="btn btn-success pull-right" onclick="location.reload()">Play Again</button>
+              <form method="post">
+                  <input type="hidden" name="level" value="{{data['levelNum']}}">
+                  <button type="submit" class="btn btn-warning pull-right">Next Level</button>
+              </form>
+          </div>
+        </div>
+      </div>
     </div>
 </div>
 <script type=text/javascript>
 
 </script>
 <script type="text/javascript">
+
     var cmd = ""; //use to store the cmd select by user
     var runcount = 0;
     function up(){
@@ -448,7 +474,10 @@ Game.prototype.checkGoal = function() {
      if (this.player.y == this.goal.y &&
        this.player.x == this.goal.x) {
 
-       body.className = 'success';
+       //body.className = 'success';
+       stop();
+       document.getElementById("score").innerHTML = calculateScore(timeElapsed,runcount)
+       $('#myModal').modal('show');
      }
      else {
        body.className = '';
@@ -593,19 +622,19 @@ Game.prototype.keyboardListener = function() {
 
 
         for (let i = 0; i < x.length; i++) {
-            if(x[i] == "a"){
+            if(x[i] == "w"){
                 obj.moveUp();
                 obj.checkGoal();
             }
-            else if(x[i] == "b"){
+            else if(x[i] == "x"){
                 obj.moveDown();
                 obj.checkGoal();
             }
-            else if(x[i] == "3"){
+            else if(x[i] == "a"){
                 obj.moveLeft();
                 obj.checkGoal();
             }
-            else{
+            else if(x[i] == "d"){
                 obj.moveRight();
                 obj.checkGoal();
             }
