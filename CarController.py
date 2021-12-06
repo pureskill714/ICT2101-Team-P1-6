@@ -46,6 +46,7 @@ class CarController(Car):
     def closeConnection(self):
         ser = self.bluetoothSetUp()
         ser.close()
+        # print("conn closed")
 
     def sendCommand(self,ser,cmd):
         try:

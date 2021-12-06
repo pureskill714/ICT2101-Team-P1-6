@@ -1,5 +1,5 @@
 # ICT2101-Team-P1-6
-Develop a Web-Based Maze Game with integration with Wi-Fi Controlled Robotic Car
+Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
 
 ## Team Members
 - Muhammad Abdurraheem Bin Abdul Hamid  `1501918@sit.singaporetech.edu.sg`
@@ -9,31 +9,33 @@ Develop a Web-Based Maze Game with integration with Wi-Fi Controlled Robotic Car
 - Zulekah Khan Binte Salahuddin Khan `2001222@sit.singaporetech.edu.sg`
 
 ## Dependencies and Prerequisities
-- Implemented using Programming language such as Flask, HTML ,Arduino IDE ,CSS ,Javascript, Code Composer and jQuery
+- Implemented using Programming language such as Python, HTML, C, Javascript
 - This project requires Python 3.6 or newer version with Flask Framework install. It is advisable to use Pycharm Community Edition IDE to run local web server.
 
 ## Project Pre-Requisites
 
-- Connection to HC-05 Bluetooth module
+- Establish Connection to HC-05 Bluetooth module
 
 ## How to run
-1. Navigate to the root directory of this project
-2. execute the command python WebPortal.py
-3. open any browser and navigate to [localhost](http://127.0.0.1:5000/)
+1. Open terminal 
+2. Navigate to the root directory of this project
+3. Execute the command: set FLASK_APP=WebPortal
+4. Execute the command: flask run if flask not found try use: python -m flask run
+4. Open any browser and navigate to [localhost](http://127.0.0.1:5000/)
 
 ## Team P1-6's Workflow:
 **Rules:**
 
 - Features assigned to different members of the team MUST have their own branch per feature under dev branch.
 
-- This code MUST only be pushed to the respective feature branches before merging to the master branch.
+- Individual code MUST be pushed to the respective feature branches before merging to the master branch.
 
 **Feature Branch Management:**
 1. one branch per feature
     - `<feature_name>` for WebPortal features
     - `<management_feature_name>` for project or repo management features 
 
-2. Developers should create feature branch from master branch
+2. Developers should create feature branch from dev branch
 3. Push code to branch ONLY when it is completed 
 
 **Development Branch Management:**
