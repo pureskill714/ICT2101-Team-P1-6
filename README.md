@@ -91,7 +91,7 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
 **3) Merge completed Feature branch to dev branch:** 
 
     3.1) After code reviewer/development lead approved, merge completed feature branch into dev
-            3.1.1) Navigate to ull requests on Github respo 
+            3.1.1) Navigate to pull requests on Github respo 
             3.1.2) Click one new pull request 
             3.1.3) Select dev branch and the corresponding feature branch to merge 
             3.1.4) Select Create pull request button
@@ -105,7 +105,7 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
             3.2.1) OnlY developer lead are able to delete any feature branch.
             3.2.2) git branch -d <feature_name> branch
             
- **4)  Issues for bug fixes and other maintenance:** 
+ **4)  Issues for bug fixes and other maintenance during Development process:** 
  
     4.1) Issue/bug found in the dev branch, developer will branch out from dev branch and resolved from the specify branch
     4.2) Issue/bug found in the feature/UI branch, developer will continue to resolved from that branch.
@@ -117,7 +117,30 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
             4.3.4) Assign a label depend on the issue type
             4.3.5) Click on Submit new issue once all the above field is fill up.
             4.3.6) Developer can only closed the issue once assigned developer lead commented "Fixed" on the issue.
-  
+           
+  **5)  Merge Dev branch with Main Branch & release of new version branch:** 
+   
+    5.1) After completed development process, merge dev branch to master branch by development lead
+            5.1.1) Navigate to pull requests on Github respo 
+            5.1.2) Click one new pull request 
+            5.1.3) Select master branch and the dev branch from dropdown list
+            5.1.4) Select Create pull request button
+            5.1.5) Input meaningful comment and title 
+            5.1.6) Select other developement lead for reviewers setting 
+            5.1.7) Assign Labels according to the type of feature and click on Create Pull Request 
+            5.1.8) Once approval given from the two 2 development lead, click on merge pull request button 
+            5.1.9) Click on the confirm merge button
+            
+      5.2) Once dev branch merge with master branch is completed, create a new "rel-<version_num>" branch by development lead
+            5.2.1) git checkout -b "rel-<version_num>" dev
+            
+               
+  **6)  Hotfix branch:** <br>
+  - As version have been release to public, hotfix have to been done fast and efficient.
+  - Create a `high-priority` issue on github project board wtih label hotfix and assign the specify developer and mention them in the commenet.
+  - Conduct step 4 for for bug/issue fixes once done,
+  - Perform step 3 for merging hotfix feature back into dev
+  - Once all done and review by development lead, development lead will closed the hotfix issues
 
 ## User Acceptance Test
 - Use case Diagram
