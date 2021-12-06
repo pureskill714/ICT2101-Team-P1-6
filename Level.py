@@ -66,10 +66,10 @@ class LevelController():
         end = [0, 0]
         lv6.setMap(start, end, map)
 
-        lv7 = Level("Custom 1",7)
-        map = [[0,1,1,0,0,0],[0,0,1,0,1,0],[1,0,1,0,1,0],[0,0,1,0,1,0],[0,1,0,0,0,1],[0,0,0,1,1,1]]
+        lv7 = Level("Custom level 1",71)
+        map = [[0,1,0,0,1,0],[0,1,0,0,0,0],[0,1,0,1,1,1],[0,1,0,0,0,1],[0,1,1,1,0,1], [0,0,0,0,0,1]]
         start = [0, 0]
-        end = [5, 3]
+        end = [5, 0]
         lv7.setMap(start, end, map)
 
         if type == "1":
@@ -90,7 +90,7 @@ class LevelController():
         elif type == "6":
             map = lv6
             return map
-        elif type == "7":
+        elif type == "71":
             map = lv7
             return map
         else:
