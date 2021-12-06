@@ -42,6 +42,9 @@ def main():
 @app.route('/selectlevel')
 def selectlevel():
     return render_template('selectlevel.html')
+@app.route('/customlevel')
+def customlevel():
+    return render_template('Customlevelpage.html')
 
 @app.route('/Configlevelpage')
 def Configlevelpage():
@@ -53,7 +56,8 @@ def game():
     if request.method == 'POST':
         back = request.referrer
         level = request.form['level']
-        if int(level) > 6:
+        print(level)
+        if int(level) > 6 and int(level) != 71:
             level= "6"
             flash("Max level reached")
         map = LevelController().getMapSetUp(level)
