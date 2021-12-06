@@ -22,8 +22,6 @@
     <list default="true" id="2089096f-d271-4ed1-a6cd-0d1273c47f2a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Level.py" beforeDir="false" afterPath="$PROJECT_DIR$/Level.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebPortal.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebPortal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Customlevelpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Customlevelpage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
