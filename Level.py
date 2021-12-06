@@ -30,37 +30,37 @@ class Level:
 class LevelController():
 
     def getMapSetUp(self,type):
-        lv1 = Level("level 1",1)
+        lv1 = Level("Level 1",1)
         map = [[1, 1, 0], [1, 0, 0], [0, 0, 1]]
         start = [0, 2]
         end = [2, 0]
         lv1.setMap(start, end, map)
 
-        lv2 = Level("level 2",2)
+        lv2 = Level("Level 2",2)
         map = [[1, 1, 0, 0, 1, 1], [0, 0, 0, 0, 1, 1], [1, 1, 1, 0, 0, 0]]
         start = [0, 1]
         end = [5, 2]
         lv2.setMap(start, end, map)
 
-        lv3 = Level("level 3",3)
+        lv3 = Level("Level 3",3)
         map = [[1,1,0,1,0,0],[1,1,0,1,0,1],[1,1,0,0,0,1],[1,1,0,1,1,1],[0,0,0,0,0,0], [1,1,0,1,1,1]]
         start = [5, 4]
         end = [5, 0]
         lv3.setMap(start, end, map)
 
-        lv4 = Level("level 4",4)
+        lv4 = Level("Level 4",4)
         map = [[0,0,1,1,1,1],[0,0,1,1,1,1],[0,0,1,1,1,1],[0,0,0,0,1,1],[0,0,0,0,0,0], [0,0,1,0,0,0]]
         start = [5, 5]
         end = [0, 0]
         lv4.setMap(start, end, map)
 
-        lv5 = Level("level 5",5)
+        lv5 = Level("Level 5",5)
         map = [[0,0,0,0,0,0],[1,1,1,1,1,0],[1,1,1,1,0,0],[1,1,0,0,0,1],[1,1,0,1,1,1], [0,0,0,0,0,0]]
         start = [5, 5]
         end = [0, 0]
         lv5.setMap(start, end, map)
 
-        lv6 = Level("level 6",6)
+        lv6 = Level("Level 6",6)
         map = [[0,1,1,0,0,0],[0,0,1,0,1,0],[1,0,1,0,1,0],[0,0,1,0,1,0],[0,1,0,0,0,1],[0,0,0,1,1,1]]
         start = [0, 0]
         end = [5, 3]

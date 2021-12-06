@@ -243,6 +243,10 @@ div.layer div {
     color: green;
     font-family: URW Chancery L, cursive;
     text-align: center;
+}
 
+#legend{
+    width:200px;
+    float: left;
 }
 

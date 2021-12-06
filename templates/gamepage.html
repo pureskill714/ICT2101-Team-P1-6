@@ -6,7 +6,7 @@
 {% endblock %}
 {% block body %}
 <!--<img src="{{url_for('static', filename='images/PuttPutt.png')}}" alt="Car Image Not Found" id="img" />-->
-<h1 id="header">Maze Driver</h1>
+<h1 id="header">{{data['level']}}</h1>
 <div class="container name">
     <div class="row">
         <div class="col box">
@@ -79,19 +79,25 @@
     <div class="form-control">
         <p>Virtual Map ({{data["level"]}})</p>
         <div class="row">
+            <div class="col-8">
+                <div id="game-container-1" class="game-container">
+                    <div id="map-and-controls">
+                        <div id="game-map-1" class="game-map">
+                            <div id="tiles" class="layer"></div>
+                            <div id="sprites" class="layer"></div>
+                            <div id="success-msg">Goal reached! Tap the maze to change levels.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <img src="{{url_for('static', filename='images/maplegend.png')}}" alt="Car Image Not Found" id="legend"/>
+            </div>
 <!--            <div class="game">-->
 <!--                <div id="board">-->
 <!--                </div>-->
 <!--            </div>-->
-            <div id="game-container-1" class="game-container">
-                <div id="map-and-controls">
-                    <div id="game-map-1" class="game-map">
-                        <div id="tiles" class="layer"></div>
-                        <div id="sprites" class="layer"></div>
-                        <div id="success-msg">Goal reached! Tap the maze to change levels.</div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 

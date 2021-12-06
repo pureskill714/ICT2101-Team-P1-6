@@ -10,7 +10,7 @@
         <div class="col">
             <div class="row">
 <!--                data is a list, i only want the status attribute in data which is the 2nd item so data[1]-->
-                <p>Robot Car Connection Status : <p style="color:red">{{data[1]}}</p></p>
+                <p>Robot Car Connection Status : <p style="color:red">{{data['status']}}</p></p>
             </div>
             <div class="row">
                 <h3 class="main">Hey kids! Click on the <em><b>Main Levels</b></em> button to get the game started!</h3>
@@ -38,11 +38,10 @@
                 <button class="cancel_btn" onclick="close_btn()">Close</button>
                 </form>
             </div>
-
-
-
             <div class="form-group">
-                <a href="/" class="btn btn-primary main_button">Exit</a>
+                <form method="post" action="{{ url_for('index') }}">
+                    <button type="submit "class="btn btn-primary main_button">Exit</button>
+                </form>
             </div>
         </div>
 

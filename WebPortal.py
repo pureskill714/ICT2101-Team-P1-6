@@ -10,14 +10,20 @@ app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 #set FLASK_APP=WebPortal
 #flask run
 
-#index page
-@app.route('/')
-def index():
-    return render_template('index.html')
-
 #instantiate new car
 car=CarController("1001","123456")
 conn = car.openConnection()
+
+#index page
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    data=1
+    if request.method == 'POST':
+        car.closeConnection()
+        flash("Close Connection")
+    return render_template('index.html',data=data)
+
+
 #main page
 #calling connection() from carCOntroller before redirect
 @app.route('/main')
@@ -25,8 +31,8 @@ def main():
     # if conn[0]:
     if True:
         flash("Robot Car is connected")
-        car.setCarStat(0,0,"connected","idle")
-        data= car.getCarStat()
+        car.setCarStat(0,0,"Connected","idle")
+        data = car.getCarStat()
         return render_template('main.html',data=data) #data = what u want to pass to html page eg. see main.html
     else:
         print(conn[1])
