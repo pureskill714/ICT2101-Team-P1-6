@@ -28,23 +28,27 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
 
 - Features assigned to different members of the team MUST have their own branch per feature under dev branch.
 
-- Individual code MUST be pushed to the respective feature branches before merging to the master branch.
+- Individual code MUST be pushed to the respective feature branches and tested before create pull request
 
 **Feature Branch Management:**
 1. one branch per feature
-    - `<feature_name>` for WebPortal features
-    - `<management_feature_name>` for project or repo management features 
+    - `feature/<feature_name>` for WebPortal features
 
 2. Developers should create feature branch from dev branch
-3. Push code to branch ONLY when it is completed 
+3. Create pull request and wait for the development lead to review and merge
 
 **Development Branch Management:**
-1. The master branch always reflects the production-ready state
+1. The dev branch always reflects the function ready state
 2. Completed and tested features branches should be merged into dev branch
-3. This code is again tested after merging with dev branch, if errors, proceed to merge with  the master branch
+3. This code is again tested after merging with dev branch, if errors, create `bugfix/<Bug_name>` branch
 
-**Main Branch Management:**
+**Bugfix Branch Management:**
+1. create `bugfix/<Bug_name>` branch from dev
+2. create pull request and wait and review and merge
+
+**Master Branch Management:**
 1. only dev branch can be merged to the main branch
+2. Always represent the production ready state
 
 **Release Branch Management**
 1. Developers can create release branch `rel_<version_num>`
