@@ -64,6 +64,35 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
 1. Developers can create the hotfix branch `hotfix_<minor_version_num>`
 2. All hotfixes branch off master and merge back into both dev and master
 
+## Standard Operating Procdeure (SOP)
+**Note `Github Desktop` were mostly use for commit/push/merge/pull request**
+
+**1) Creating Features in Project Board:**
+
+    - Assign different priority(e.g high,medium & low) to different feature on team's Project Board
+    - Create different feature branch from dev branch base on corresponding feature assign in Project board
+    - Assign each feature to different Developer to commit with the specify feature
+    
+    # Feature to branch off from dev
+    git checkout -b feature/<feature_name> dev
+    
+    # UI to branch off from dev
+    git checkout -b UI/<UI_name> dev
+    
+    
+**2) Commit to Feature Progress:**
+
+    - Commit and push working progress of `feature/<feature_name>` branch to that specifyy feature branch with modify code once the component of the feature is completed and         unit testing is done
+    
+    # add commit messgae and push the modify code changes to Github repo of the specify feature once componenet is complete
+    git commit -a -m "added feature to <feature_name> branch"
+    git push
+    
+**3) Merge to completed Feature branch to dev branch:**  
+  
+     - After code reviewer/development lead approved, merge completed feature branch into dev
+     - Delete feature branch
+
 ## User Acceptance Test
 - Use case Diagram
 - System State Diagram
