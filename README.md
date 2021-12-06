@@ -132,14 +132,14 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
             5.1.9) Click on the confirm merge button
             
       5.2) Once dev branch merge with master branch is completed, create a new "rel-<version_num>" branch by development lead
-            5.2.1) git checkout -b "rel-<version_num>" dev
+            5.2.1) git checkout -b "rel_<version_num>" dev
             
                
   **6)  Hotfix branch:** <br>
   - As version have been release to public, hotfix have to been done fast and efficient.
-  - Create a `high-priority` issue on github project board wtih label hotfix and assign the specify developer and mention them in the commenet.
+  - Create a `high-priority` issue on github project board wtih label hotfix and assign the specify developer and mention them in the comment.
   - Conduct step 4 for for bug/issue fixes once done,
-  - Perform step 3 for merging hotfix feature back into dev
+  - Perform step 3 for merging hotfix feature back into dev and master branch
   - Once all done and review by development lead, development lead will closed the hotfix issues
 
 ## User Acceptance Test
