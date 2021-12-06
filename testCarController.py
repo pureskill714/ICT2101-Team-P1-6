@@ -1,5 +1,6 @@
 from CarController import CarController
 import pytest
+import time
 
 class TestClass:
 
@@ -43,7 +44,7 @@ class TestClass:
         name = "1001"
         pwd = "123456"
         car = CarController(name,pwd)
-        port = "COM15" #change here
+        port = "COM10" #change here
         con = car.bluetoothSetUp(port)
         assert con.port == port
 
@@ -53,36 +54,39 @@ class TestClass:
         car = CarController(name,pwd)
         #port vaires from diff device, change accordingly
         invalidport = "COM15"
-        validport = "COM9" #change here
+        validport = "COM10" #change here
         con = car.openConnection(invalidport)
         con1 = car.openConnection(validport)
         assert con[0] == False
-        assert con[0] == True #when connection success
+        assert con1[0] == True #when connection success
+
 
     def test_testconnection(self):
         name = "1001"
         pwd = "123456"
         car = CarController(name,pwd)
-        validport = "COM15" #change here
+        validport = "COM10" #change here
         con = car.openConnection(validport)
         result = car.testConnection(con)
         # assert result[0] == False
         # assert result[1] == "Open connection fail"
         #ensure here
-        assert result[0] == False
-        assert result[1] == "connection not open"
+        # assert result[0] == False
+        # assert result[1] == "connection not open"
         assert result[0] == True
         assert result[1].port == validport
+        # car.closeConnection(validport)
 
     def test_sendCommand(self):
         name = "1001"
         pwd = "123456"
         car = CarController(name,pwd)
-        validport = "COM15" #change here
+        validport = "COM10" #change here
         con = car.openConnection(validport)
-        validcmd = "0" #change here
-        invalidcmd = "@#$" #change here
-        result = car.sendCommand(con,validcmd)
-        assert result == True
-        result = car.sendCommand(con,invalidcmd)
-        assert result == False
+        validcmd = "s" #change here
+        # invalidcmd = "@#$" #change here
+        result = car.sendCommand(con[1],validcmd)
+        assert result[0] == True
+
+        # result = car.sendCommand(con[1],invalidcmd)
+        # assert result[0] == False
