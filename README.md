@@ -146,7 +146,7 @@ Web-Based Maze Game with integration with Bluettoth Controlled Robotic Car
 - Use case Diagram
 - System State Diagram
 - Video for System Test
-[![UAT TEST VIDEO](https://i9.ytimg.com/vi/6PSVmOIe_z4/maxresdefault.jpg?time=1638800100000&sqp=COS1uI0G&rs=AOn4CLB0cYG50JT80p1bHqdvKs72rD0rVg)](https://www.youtube.com/embed/6PSVmOIe_z4) </br>
+[![UAT TEST VIDEO](https://i9.ytimg.com/vi/8NqqqXunhAQ/maxresdefault.jpg?time=1638801300000&sqp=CJS_uI0G&rs=AOn4CLAYftxYuwNItzd8ElvPJKX35UTVSQ)](https://www.youtube.com/embed/8NqqqXunhAQ) </br>
 
 
 ## Whitebox Testing
